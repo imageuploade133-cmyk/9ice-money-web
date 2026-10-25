@@ -13,7 +13,25 @@
     }
 
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+      scrollbar-width: thin;
+      scrollbar-color: var(--hero-yellow) #2526bd;
+    }
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #2526bd;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--hero-yellow);
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #ffe477;
+    }
     body { margin: 0; font-family: Inter, Arial, sans-serif; background: var(--hero-blue); }
     .hero-page { min-height: 100vh; background: var(--hero-blue); color: var(--white); overflow: hidden; position: relative; }
     .hero {
