@@ -1,0 +1,152 @@
+<!DOCTYPE html><html lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>9iceMoney - Personal &amp; Business Banking</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+    :root {
+      --hero-blue: #3738e9;
+      --hero-yellow: #ffdc55;
+      --white: #fff;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: Inter, Arial, sans-serif; background: var(--hero-blue); }
+    .hero-page { min-height: 100vh; background: var(--hero-blue); color: var(--white); overflow: hidden; position: relative; }
+    .hero {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.05fr);
+      align-items: center;
+      width: min(100%, 1800px);
+      min-height: 720px;
+      max-height: 820px;
+      margin-inline: auto;
+      padding: 48px clamp(30px, 5vw, 100px);
+      isolation: isolate;
+    }
+    .hero-copy { position: relative; z-index: 2; max-width: 780px; padding-block: 10px; }
+    .eyebrow {
+      display: inline-block;
+      margin: 0 0 32px;
+      padding-bottom: 11px;
+      border-bottom: 5px dashed var(--hero-yellow);
+      font-size: clamp(15px, 1.75vw, 28px);
+      line-height: 1.25;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+    .eyebrow span { padding-inline: 3px; }
+    h1 {
+      max-width: 790px;
+      margin: 0;
+      font-size: clamp(28px, 2.5vw, 50px);
+      line-height: 1.25;
+      letter-spacing: -0.05em;
+      font-weight: 800;
+    }
+    .hero-description {
+      max-width: 620px;
+      margin: 28px 0 0;
+      font-size: clamp(17px, 1.4vw, 24px);
+      line-height: 1.45;
+      letter-spacing: -0.02em;
+      font-weight: 700;
+    }
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 220px;
+      min-height: 58px;
+      margin-top: 32px;
+      padding: 16px 36px;
+      border-radius: 999px;
+      background: var(--hero-yellow);
+      color: #090909;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 18px;
+      font-weight: 800;
+      transition: transform .18s ease, background-color .18s ease, box-shadow .18s ease;
+    }
+    .cta:hover { transform: translateY(-3px); background: #ffe477; box-shadow: 0 12px 28px #1717a544; }
+    .cta:focus-visible { outline: 3px solid white; outline-offset: 5px; }
+    .hero-art {
+      position: absolute;
+      z-index: 1;
+      top: 2%;
+      right: 3.5%;
+      width: 48.5%;
+      height: 96%;
+      overflow: hidden;
+      border-radius: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-image {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center right;
+    }
+    .scribble { position: absolute; z-index: 0; color: #7778ff; opacity: .55; font-family: Georgia, serif; font-weight: 400; pointer-events: none; }
+    .scribble-top { top: -5px; right: 42%; font-size: 90px; transform: rotate(25deg); color: #2526bd; }
+    .scribble-bottom { bottom: -25px; left: 26%; font-size: 150px; transform: rotate(35deg); }
+    .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+    @media (min-width: 1600px) {
+      .hero-art { right: 4%; width: 47%; }
+    }
+    @media (max-width: 1050px) {
+      .hero { grid-template-columns: 1fr 0.85fr; padding-inline: 5vw; max-height: none; }
+      .hero-art { right: 2.5%; width: 46%; }
+      .eyebrow { white-space: normal; }
+      .cta { min-width: 205px; min-height: 56px; }
+    }
+    @media (max-width: 760px) {
+      .hero { display: flex; flex-direction: column; align-items: stretch; min-height: auto; max-height: none; padding: 42px 22px 32px; gap: 24px; }
+      .hero-copy { padding: 0; }
+      .eyebrow { margin-bottom: 24px; padding-bottom: 8px; border-bottom-width: 4px; font-size: clamp(14px, 3.6vw, 19px); }
+      h1 { max-width: 640px; font-size: clamp(30px, 8.5vw, 48px); line-height: 1.18; letter-spacing: -0.05em; }
+      .hero-description { margin-top: 22px; font-size: 18px; line-height: 1.45; }
+      .cta { min-width: 190px; min-height: 54px; margin-top: 24px; padding: 15px 30px; font-size: 16px; }
+      .hero-art { position: relative; inset: auto; width: 100%; height: auto; aspect-ratio: 0.96 / 1; border-radius: 20px; }
+      .hero-image { object-position: center; }
+      .scribble-top { top: 44%; right: 5%; font-size: 65px; }
+      .scribble-bottom { display: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+<main class="hero-page" style="min-height: auto; height: auto;">
+<section aria-labelledby="hero-title" class="hero" style="min-height: auto; max-height: none; padding-top: 48px; padding-bottom: 48px;">
+<div class="hero-copy">
+<p class="eyebrow">Personal Banking <span aria-hidden="true" class="">|</span> Business Banking</p>
+<h1 id="hero-title" class="">
+          Send money, pay bills, and take control of your finances with a seamless banking experience built for everyday life
+        </h1>
+<p class="hero-description">
+          One platform for transfers, payments, and everyday financial services.
+        </p>
+<a class="cta" href="#get-started">Get started</a>
+</div>
+<div aria-label="9iceMoney mobile banking and POS devices" class="hero-art" style="position: relative; top: auto; right: auto; width: 100%; height: auto; max-height: 600px;">
+<img alt="A customer holding a 9iceMoney banking app and payment terminal" class="hero-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlAp5zzBetzhUK_TzuAjiiJebOL_FfcNch-1rCh_LTNOc9WrNJyFRjS-rq_wM6AFDpIsgcV4XFEzSmiSzwBJB8hSqd9wzZAmuvpyOSdGHWUy3GghnRNHn25ckyP7sZKqME-pKWK46VZsLq34F6BaFBTOz6L0xIsGwPBVkx-hUH8hEuBC1ni_L2lJQaNO71sRPIMsqLEP8KAhljXHMPNPEXKYxijxo-JzOEhkVZivCCh930smY-L0TFA2hMI3aqc8gyM2M">
+</div>
+
+
+</section>
+<span class="visually-hidden" id="get-started">Get started with 9iceMoney</span>
+</main>
+
+
+</body></html>
