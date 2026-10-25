@@ -32,7 +32,14 @@
     ::-webkit-scrollbar-thumb:hover {
       background: #ffe477;
     }
-    body { margin: 0; font-family: Inter, Arial, sans-serif; background: var(--hero-blue); }
+    body {
+      margin: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--hero-blue);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
     .hero-page { min-height: 100vh; background: var(--hero-blue); color: var(--white); overflow: hidden; position: relative; }
     .hero {
       position: relative;
@@ -40,55 +47,58 @@
       grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.05fr);
       align-items: center;
       width: min(100%, 1800px);
-      min-height: 720px;
-      max-height: 820px;
+      min-height: 600px;
+      max-height: 750px;
       margin-inline: auto;
-      padding: 48px clamp(30px, 5vw, 100px);
+      padding: 40px clamp(24px, 4vw, 80px);
       isolation: isolate;
     }
-    .hero-copy { position: relative; z-index: 2; max-width: 780px; padding-block: 10px; }
+    .hero-copy { position: relative; z-index: 2; max-width: 680px; padding-block: 10px; }
     .eyebrow {
       display: inline-block;
-      margin: 0 0 32px;
-      padding-bottom: 11px;
-      border-bottom: 5px dashed var(--hero-yellow);
-      font-size: clamp(15px, 1.75vw, 28px);
-      line-height: 1.25;
-      font-weight: 800;
+      margin: 0 0 20px;
+      padding-bottom: 8px;
+      border-bottom: 3px dashed var(--hero-yellow);
+      font-size: clamp(13px, 1.2vw, 18px);
+      line-height: 1.3;
+      font-weight: 700;
+      letter-spacing: -0.01em;
       white-space: nowrap;
     }
     .eyebrow span { padding-inline: 3px; }
     h1 {
-      max-width: 790px;
+      max-width: 680px;
       margin: 0;
-      font-size: clamp(28px, 2.5vw, 50px);
+      font-size: clamp(24px, 2.2vw, 38px);
       line-height: 1.25;
-      letter-spacing: -0.05em;
-      font-weight: 800;
+      letter-spacing: -0.03em;
+      font-weight: 700;
     }
     .hero-description {
-      max-width: 620px;
-      margin: 28px 0 0;
-      font-size: clamp(17px, 1.4vw, 24px);
-      line-height: 1.45;
-      letter-spacing: -0.02em;
-      font-weight: 700;
+      max-width: 540px;
+      margin: 18px 0 0;
+      font-size: clamp(14px, 1.1vw, 18px);
+      line-height: 1.5;
+      letter-spacing: -0.01em;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.92);
     }
     .cta {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-width: 220px;
-      min-height: 58px;
-      margin-top: 32px;
-      padding: 16px 36px;
+      min-width: 170px;
+      min-height: 48px;
+      margin-top: 28px;
+      padding: 12px 28px;
       border-radius: 999px;
       background: var(--hero-yellow);
       color: #090909;
       text-decoration: none;
       text-transform: uppercase;
-      font-size: 18px;
-      font-weight: 800;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
       transition: transform .18s ease, background-color .18s ease, box-shadow .18s ease;
     }
     .cta:hover { transform: translateY(-3px); background: #ffe477; box-shadow: 0 12px 28px #1717a544; }
@@ -127,12 +137,12 @@
       .cta { min-width: 205px; min-height: 56px; }
     }
     @media (max-width: 760px) {
-      .hero { display: flex; flex-direction: column; align-items: stretch; min-height: auto; max-height: none; padding: 42px 22px 32px; gap: 24px; }
+      .hero { display: flex; flex-direction: column; align-items: stretch; min-height: auto; max-height: none; padding: 36px 20px 28px; gap: 20px; }
       .hero-copy { padding: 0; }
-      .eyebrow { margin-bottom: 24px; padding-bottom: 8px; border-bottom-width: 4px; font-size: clamp(14px, 3.6vw, 19px); }
-      h1 { max-width: 640px; font-size: clamp(30px, 8.5vw, 48px); line-height: 1.18; letter-spacing: -0.05em; }
-      .hero-description { margin-top: 22px; font-size: 18px; line-height: 1.45; }
-      .cta { min-width: 190px; min-height: 54px; margin-top: 24px; padding: 15px 30px; font-size: 16px; }
+      .eyebrow { margin-bottom: 18px; padding-bottom: 6px; border-bottom-width: 3px; font-size: clamp(13px, 3.4vw, 16px); }
+      h1 { max-width: 100%; font-size: clamp(24px, 6.5vw, 34px); line-height: 1.2; letter-spacing: -0.03em; }
+      .hero-description { margin-top: 16px; font-size: 15px; line-height: 1.45; }
+      .cta { min-width: 160px; min-height: 46px; margin-top: 22px; padding: 12px 24px; font-size: 14px; }
       .hero-art { position: relative; inset: auto; width: 100%; height: auto; aspect-ratio: 0.96 / 1; border-radius: 20px; }
       .hero-image { object-position: center; }
       .scribble-top { top: 44%; right: 5%; font-size: 65px; }
