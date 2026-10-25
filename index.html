@@ -41,6 +41,87 @@
       text-rendering: optimizeLegibility;
     }
     .hero-page { min-height: 100vh; background: var(--hero-blue); color: var(--white); overflow: hidden; position: relative; }
+
+    /* Top Navigation Bar */
+    .main-nav {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      width: min(100%, 1800px);
+      margin: 0 auto;
+      padding: clamp(16px, 2.2vw, 28px) clamp(24px, 4vw, 80px) 10px;
+      position: relative;
+      z-index: 10;
+    }
+    .nav-links-group {
+      display: flex;
+      align-items: center;
+      gap: clamp(18px, 2.2vw, 32px);
+    }
+    .nav-right {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: clamp(16px, 2vw, 28px);
+    }
+    .nav-link-item {
+      color: rgba(255, 255, 255, 0.9);
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      transition: color 0.18s ease;
+      white-space: nowrap;
+    }
+    .nav-link-item:hover {
+      color: var(--hero-yellow);
+    }
+    .nav-logo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .nav-logo-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      padding: 0px 8px;
+    }
+    .nav-logo-img {
+      height: clamp(80px, 7vw, 115px);
+      width: auto;
+      max-width: 380px;
+      object-fit: contain;
+      display: block;
+      filter: drop-shadow(0 2px 10px rgba(0,0,0,0.18));
+      transition: transform 0.2s ease;
+      transform: scale(1.15);
+    }
+    .nav-logo-link:hover .nav-logo-img {
+      transform: scale(1.2);
+    }
+    .nav-signin-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 22px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(255, 255, 255, 0.45);
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+    .nav-signin-btn:hover {
+      background: rgba(255, 255, 255, 0.18);
+      border-color: #ffffff;
+      transform: translateY(-1px);
+    }
+
     .hero {
       position: relative;
       display: grid;
@@ -50,7 +131,7 @@
       min-height: 600px;
       max-height: 750px;
       margin-inline: auto;
-      padding: 40px clamp(24px, 4vw, 80px);
+      padding: 20px clamp(24px, 4vw, 80px) 48px;
       isolation: isolate;
     }
     .hero-copy { position: relative; z-index: 2; max-width: 680px; padding-block: 10px; }
@@ -136,8 +217,18 @@
       .eyebrow { white-space: normal; }
       .cta { min-width: 205px; min-height: 56px; }
     }
+    @media (max-width: 900px) {
+      .main-nav {
+        display: flex;
+        justify-content: space-between;
+        padding-block: 16px;
+      }
+      .nav-links-group {
+        display: none;
+      }
+    }
     @media (max-width: 760px) {
-      .hero { display: flex; flex-direction: column; align-items: stretch; min-height: auto; max-height: none; padding: 36px 20px 28px; gap: 20px; }
+      .hero { display: flex; flex-direction: column; align-items: stretch; min-height: auto; max-height: none; padding: 28px 20px 28px; gap: 20px; }
       .hero-copy { padding: 0; }
       .eyebrow { margin-bottom: 18px; padding-bottom: 6px; border-bottom-width: 3px; font-size: clamp(13px, 3.4vw, 16px); }
       h1 { max-width: 100%; font-size: clamp(24px, 6.5vw, 34px); line-height: 1.2; letter-spacing: -0.03em; }
@@ -156,7 +247,28 @@
 </head>
 <body>
 <main class="hero-page" style="min-height: auto; height: auto;">
-<section aria-labelledby="hero-title" class="hero" style="min-height: auto; max-height: none; padding-top: 48px; padding-bottom: 48px;">
+<nav aria-label="Main Navigation" class="main-nav">
+  <div class="nav-links-group">
+    <a href="#about" class="nav-link-item">About Us</a>
+    <a href="#services" class="nav-link-item">Services</a>
+    <a href="#products" class="nav-link-item">Products</a>
+  </div>
+  <div class="nav-logo-container">
+    <a href="#" class="nav-logo-link">
+      <img src="https://lh3.googleusercontent.com/aida/AEtjO1V1pnzcRhdvdHwHfrujjd1T2NAPeONvih25yfH2vMqsQd-Us1tC3Poxr5HcHDeAqWlNdfJQpMuai03s0AODxduqO30KRLxzAsH7Soaw1PMOqV3XUGI3dL-aS4xqhri5hP2UU35m3dAcB-owqPH5_QczoMF5qOh0pm7L99Vja417ux5KVXLQbu2PNrbt9iVH1trPpSEwKdGjkvEGNvf7r432LbsUjczLliC9Pez0XfPnDDNkQchV2k57uhVF" alt="9iceMoney" class="nav-logo-img">
+    </a>
+  </div>
+  <div class="nav-right">
+    <div class="nav-links-group">
+      <a href="#support" class="nav-link-item">Support</a>
+      <a href="#review" class="nav-link-item">Review</a>
+      <a href="#earning" class="nav-link-item">Earning</a>
+    </div>
+    <a href="#login" class="nav-signin-btn">Sign In</a>
+  </div>
+</nav>
+
+<section aria-labelledby="hero-title" class="hero" style="min-height: auto; max-height: none;">
 <div class="hero-copy">
 <p class="eyebrow">Personal Banking <span aria-hidden="true" class="">|</span> Business Banking</p>
 <h1 id="hero-title" class="">
