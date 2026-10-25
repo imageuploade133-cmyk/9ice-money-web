@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --hero-blue: #3738e9;
+  --hero-yellow: #ffdc55;
+  --white: #fff;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: Inter, Arial, sans-serif; }
+.hero-page { min-height: 100vh; background: var(--hero-blue); color: var(--white); overflow: hidden; }
+.hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.04fr);
+  align-items: center;
+  width: min(100%, 1800px);
+  min-height: min(100vh, 1000px);
+  margin-inline: auto;
+  padding: clamp(42px, 5.2vw, 108px) clamp(30px, 6.4vw, 132px);
+  isolation: isolate;
+}
+.hero-copy { position: relative; z-index: 2; max-width: 780px; padding-block: 20px; }
+.eyebrow {
+  display: inline-block;
+  margin: 0 0 clamp(42px, 4.6vw, 88px);
+  padding-bottom: 11px;
+  border-bottom: 5px dashed var(--hero-yellow);
+  font-size: clamp(15px, 1.75vw, 29px);
+  line-height: 1.25;
+  font-weight: 800;
+  white-space: nowrap;
+}
+.eyebrow span { padding-inline: 3px; }
+h1 {
+  max-width: 790px;
+  margin: 0;
+  font-size: clamp(30px, 2.75vw, 57px);
+  line-height: 1.29;
+  letter-spacing: -0.055em;
+  font-weight: 800;
+}
+.hero-description {
+  max-width: 620px;
+  margin: clamp(38px, 5vw, 88px) 0 0;
+  font-size: clamp(18px, 1.65vw, 30px);
+  line-height: 1.5;
+  letter-spacing: -0.025em;
+  font-weight: 700;
+}
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 245px;
+  min-height: 64px;
+  margin-top: clamp(32px, 3.4vw, 64px);
+  padding: 18px 40px;
+  border-radius: 999px;
+  background: var(--hero-yellow);
+  color: #090909;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 19px;
+  font-weight: 800;
+  transition: transform .18s ease, background-color .18s ease, box-shadow .18s ease;
+}
+.cta:hover { transform: translateY(-3px); background: #ffe477; box-shadow: 0 12px 28px #1717a544; }
+.cta:focus-visible { outline: 3px solid white; outline-offset: 5px; }
+.hero-art { position: absolute; z-index: 1; top: 3.2%; right: 3.8%; width: 48.5%; height: 93.5%; overflow: hidden; border-radius: 30px; }
+.hero-image { object-fit: cover; object-position: center; }
+.scribble { position: absolute; z-index: 0; color: #7778ff; opacity: .55; font-family: Georgia, serif; font-weight: 400; pointer-events: none; }
+.scribble-top { top: -5px; right: 42%; font-size: 100px; transform: rotate(25deg); color: #2526bd; }
+.scribble-bottom { bottom: -35px; left: 26%; font-size: 170px; transform: rotate(35deg); }
+.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+@media (min-width: 1600px) {
+  .hero { min-height: 100vh; }
+  .hero-art { right: 4.2%; width: 47.5%; }
+}
+@media (max-width: 1050px) {
+  .hero { grid-template-columns: 1fr 0.85fr; padding-inline: 5vw; }
+  .hero-art { right: 2.5%; width: 46%; }
+  .eyebrow { white-space: normal; }
+  .cta { min-width: 205px; min-height: 58px; }
+}
+@media (max-width: 760px) {
+  .hero { display: flex; flex-direction: column; align-items: stretch; min-height: auto; padding: 42px 22px 32px; gap: 26px; }
+  .hero-copy { padding: 0; }
+  .eyebrow { margin-bottom: 30px; padding-bottom: 8px; border-bottom-width: 4px; font-size: clamp(14px, 3.6vw, 19px); }
+  h1 { max-width: 640px; font-size: clamp(31px, 8.5vw, 52px); line-height: 1.17; letter-spacing: -0.05em; }
+  .hero-description { margin-top: 25px; font-size: 18px; line-height: 1.5; }
+  .cta { min-width: 190px; min-height: 56px; margin-top: 26px; padding: 15px 30px; font-size: 16px; }
+  .hero-art { position: relative; inset: auto; width: 100%; height: auto; aspect-ratio: 0.96 / 1; border-radius: 22px; }
+  .hero-image { object-position: center; }
+  .scribble-top { top: 44%; right: 5%; font-size: 70px; }
+  .scribble-bottom { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; }
+}
