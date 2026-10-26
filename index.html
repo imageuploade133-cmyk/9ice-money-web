@@ -156,14 +156,15 @@
       padding: 0 8px;
     }
 
-    .brand-logo-svg {
-      height: clamp(48px, 4.5vw, 60px);
+    .brand-logo-img {
+      height: clamp(38px, 3.8vw, 50px);
       width: auto;
       display: block;
+      filter: brightness(0) invert(1);
       transition: transform var(--transition-base);
     }
 
-    .brand-logo-link:hover .brand-logo-svg {
+    .brand-logo-link:hover .brand-logo-img {
       transform: scale(1.05);
     }
 
@@ -832,12 +833,8 @@
     </nav>
 
     <div class="nav-brand">
-      <a href="#" class="brand-logo-link" aria-label="9iceMoney Home">
-        <svg width="220" height="50" viewBox="0 0 220 50" fill="none" xmlns="http://www.w3.org/2000/svg" class="brand-logo-svg">
-          <rect x="2" y="5" width="40" height="40" rx="12" fill="#FFDC55"/>
-          <path d="M26.5 16.5C26.5 14.29 24.71 12.5 22.5 12.5C20.29 12.5 18.5 14.29 18.5 16.5C18.5 18.71 20.29 20.5 22.5 20.5C24.71 20.5 26.5 18.71 26.5 16.5ZM22.5 24.5C18.08 24.5 14.5 20.92 14.5 16.5C14.5 12.08 18.08 8.5 22.5 8.5C26.92 8.5 30.5 12.08 30.5 16.5V28.5C30.5 32.92 26.92 36.5 22.5 36.5C18.08 36.5 14.5 32.92 14.5 28.5H18.5C18.5 30.71 20.29 32.5 22.5 32.5C24.71 32.5 26.5 30.71 26.5 28.5V24.5H22.5Z" fill="#3738E9"/>
-          <text x="52" y="33" fill="#FFFFFF" font-family="'Inter', sans-serif" font-weight="900" font-size="25" letter-spacing="-0.03em">9iceMoney</text>
-        </svg>
+      <a href="index.html" class="brand-logo-link" aria-label="9iceMoney Home">
+        <img src="images/logo.png" alt="9iceMoney Logo" class="brand-logo-img" />
       </a>
     </div>
 
