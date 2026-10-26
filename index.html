@@ -467,7 +467,43 @@
     }
 
     /* ==========================================================================
-       6. COMPONENT: APP DOWNLOAD SHOWCASE & HARDWARE MOCKUPS
+       6. COMPONENT: 24/7 SUPPORT BANNER
+       ========================================================================== */
+    .component-support-banner {
+      background: var(--hero-blue);
+      padding: clamp(48px, 6vw, 84px) clamp(20px, 4vw, 64px);
+      position: relative;
+      z-index: 2;
+    }
+
+    .support-banner-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .support-banner-box {
+      width: 100%;
+      border-radius: clamp(20px, 3.5vw, 36px);
+      overflow: hidden;
+      box-shadow: rgba(9, 10, 50, 0.45) 0px 24px 56px -12px;
+      background: #1c208a;
+      display: flex;
+    }
+
+    .support-banner-img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* ==========================================================================
+       7. COMPONENT: APP DOWNLOAD SHOWCASE & HARDWARE MOCKUPS
        ========================================================================== */
     .component-download-section {
       background: linear-gradient(180deg, #292ac8 0%, #2022b8 100%);
@@ -561,7 +597,7 @@
     }
 
     /* ==========================================================================
-       7. COMPONENT: FOOTER
+       8. COMPONENT: FOOTER
        ========================================================================== */
     .component-footer {
       background: var(--navy-dark);
@@ -583,7 +619,7 @@
       font-weight: 900;
       letter-spacing: 0.04em;
       line-height: 0.85;
-      color: rgba(255, 255, 255, 0.18);
+      color: rgba(255, 255, 255, 0.1);
       text-align: center;
       text-transform: uppercase;
       white-space: nowrap;
@@ -716,10 +752,11 @@
       font-weight: 600;
       letter-spacing: 0.12em;
       text-transform: uppercase;
+      line-height: 1.6;
     }
 
     /* ==========================================================================
-       8. RESPONSIVE BREAKPOINTS & ACCESSIBILITY
+       9. RESPONSIVE BREAKPOINTS & ACCESSIBILITY
        ========================================================================== */
     @media (max-width: 1050px) {
       .component-hero {
@@ -899,7 +936,7 @@
               <div style="display: flex; align-items: flex-end; justify-content: space-between; position: relative; z-index: 2; gap: 8px;">
                 <div style="min-width: 0;">
                   <div style="font-size: 7.5px; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(255, 255, 255, 0.55); font-weight: 700; margin-bottom: 2px;">CARDHOLDER</div>
-                  <div style="font-size: clamp(10.5px, 1vw, 12px); font-weight: 700; color: #f1f5f9; letter-spacing: 0.07em; text-transform: uppercase; white-space: nowrap;">ALEXANDER OKONKWO</div>
+                  <div style="font-size: clamp(10.5px, 1vw, 12px); font-weight: 700; color: #f1f5f9; letter-spacing: 0.07em; text-transform: uppercase; white-space: nowrap;">ALEX JONES</div>
                 </div>
                 <div style="flex-shrink: 0; padding-inline: 4px;">
                   <div style="font-size: 7.5px; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(255, 255, 255, 0.55); font-weight: 700; margin-bottom: 2px; text-align: center;">VALID THRU</div>
@@ -1038,6 +1075,17 @@
             </a>
           </div>
 
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         COMPONENT: 24/7 SUPPORT SHOWCASE BANNER
+         ======================================================================== -->
+    <section id="support" aria-labelledby="support-heading" class="component-support-banner">
+      <div class="support-banner-inner reveal-on-scroll fade-scale">
+        <div class="support-banner-box">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhtSsxDd4Lxy3r4bU2eRrPI4AwhD0zzbz0B9Rr0NqVLRFIb4kKhEH7CM4nErkGQUmnIg109BscYuzR5zabU9cYNaGSuR2GDusiHbMvquPW36tF-8mffnBuOtm9D7kvOZojLyetyvO3JSdmwGXluvYFQnImRmw4aaFex6lfTTNnF0UrWrnb5-HPIjsKxQMvpsQyEA2fcL6GDcMwfcPOUprtdmueV7B1aDLzqXW1_F5DF62VGK_P0g3I_I2UjIb_45AHZmg" alt="9iceMoney 24/7 support everyday market traders and business community" class="support-banner-img">
         </div>
       </div>
     </section>
@@ -1289,6 +1337,7 @@
 
       <div class="footer-copyright">
         <p>9ICEMONEY, 2025 ALL RIGHTS RESERVED.</p>
+        <p style="margin-top: 4px; opacity: 0.85; font-size: 11px;">ADS DEVELOPMENT & SOFTWARE RC:3569383</p>
       </div>
     </div>
   </footer>
