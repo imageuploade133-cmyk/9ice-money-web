@@ -289,10 +289,188 @@
     }
 
     /* ==========================================================================
-       5. COMPONENT: APP DOWNLOAD SHOWCASE & HARDWARE MOCKUPS
+       5. COMPONENT: 3-CARD PRODUCT SHOWCASE SECTION
+       ========================================================================== */
+    .component-product-showcase {
+      padding: clamp(60px, 8vw, 100px) clamp(20px, 5vw, 80px);
+      background: linear-gradient(180deg, var(--hero-blue) 0%, #292ac8 100%);
+      position: relative;
+      z-index: 2;
+    }
+
+    .product-showcase-inner {
+      max-width: 1360px;
+      margin: 0 auto;
+    }
+
+    .product-showcase-header {
+      text-align: center;
+      max-width: 820px;
+      margin: 0 auto 64px;
+    }
+
+    .product-badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 20px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(255, 220, 85, 0.7);
+      background: rgba(255, 220, 85, 0.12);
+      margin-bottom: 20px;
+      box-shadow: 0 4px 16px rgba(255, 220, 85, 0.15);
+    }
+
+    .product-badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--hero-yellow);
+      display: inline-block;
+    }
+
+    .product-badge-text {
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--hero-yellow);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .product-showcase-title {
+      margin: 0 0 18px;
+      font-size: clamp(30px, 3.5vw, 48px);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.18;
+      letter-spacing: -0.035em;
+    }
+
+    .product-showcase-subtext {
+      margin: 0;
+      font-size: clamp(16px, 1.25vw, 19px);
+      color: rgba(255, 255, 255, 0.82);
+      line-height: 1.6;
+      font-weight: 500;
+      max-width: 660px;
+      margin-inline: auto;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+      gap: clamp(24px, 2.5vw, 36px);
+      align-items: stretch;
+    }
+
+    .product-card {
+      background: linear-gradient(180deg, rgba(28, 32, 138, 0.95) 0%, rgba(17, 20, 96, 0.98) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 28px;
+      padding: clamp(26px, 2.5vw, 36px);
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 20px 45px -10px rgba(7, 9, 44, 0.5), inset 0 1px 0 rgba(255,255,255,0.15);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 48px -12px rgba(9, 10, 48, 0.5);
+      border-color: rgba(255, 220, 85, 0.4);
+    }
+
+    .product-card-badge-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 22px;
+    }
+
+    .product-category-tag {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 6px 13px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.14);
+      color: var(--white);
+    }
+
+    .product-meta-tag {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.7);
+      font-weight: 600;
+    }
+
+    .product-title {
+      margin: 0 0 10px;
+      font-size: 23px;
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: -0.025em;
+    }
+
+    .product-description {
+      margin: 0 0 22px;
+      font-size: 14.5px;
+      line-height: 1.55;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .product-features-list {
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+      margin-bottom: 30px;
+    }
+
+    .product-feature-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13.5px;
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    .feature-check-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: rgba(255, 220, 85, 0.22);
+      color: var(--hero-yellow);
+      font-weight: 900;
+      font-size: 12px;
+    }
+
+    .product-link {
+      color: var(--hero-yellow);
+      font-size: 15px;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      margin-top: auto;
+      transition: gap 0.2s ease;
+    }
+
+    .product-card:hover .product-link {
+      gap: 10px;
+    }
+
+    /* ==========================================================================
+       6. COMPONENT: APP DOWNLOAD SHOWCASE & HARDWARE MOCKUPS
        ========================================================================== */
     .component-download-section {
-      background: linear-gradient(180deg, var(--hero-blue) 0%, #2022b8 100%);
+      background: linear-gradient(180deg, #292ac8 0%, #2022b8 100%);
       padding: clamp(32px, 5vw, 64px) clamp(20px, 4vw, 60px) clamp(48px, 6vw, 80px);
       display: flex;
       justify-content: center;
@@ -383,7 +561,7 @@
     }
 
     /* ==========================================================================
-       6. COMPONENT: FOOTER
+       7. COMPONENT: FOOTER
        ========================================================================== */
     .component-footer {
       background: var(--navy-dark);
@@ -541,7 +719,7 @@
     }
 
     /* ==========================================================================
-       7. RESPONSIVE BREAKPOINTS & ACCESSIBILITY
+       8. RESPONSIVE BREAKPOINTS & ACCESSIBILITY
        ========================================================================== */
     @media (max-width: 1050px) {
       .component-hero {
@@ -653,7 +831,206 @@
       </div>
 
       <div class="hero-showcase reveal-on-scroll slide-right delay-200" aria-label="9iceMoney mobile banking and POS devices">
-        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlAp5zzBetzhUK_TzuAjiiJebOL_FfcNch-1rCh_LTNOc9WrNJyFRjS-rq_wM6AFDpIsgcV4XFEzSmiSzwBJB8hSqd9wzZAmuvpyOSdGHWUy3GghnRNHn25ckyP7sZKqME-pKWK46VZsLq34F6BaFBTOz6L0xIsGwPBVkx-hUH8hEuBC1ni_L2lJQaNO71sRPIMsqLEP8KAhljXHMPNPEXKYxijxo-JzOEhkVZivCCh930smY-L0TFA2hMI3aqc8gyM2M" alt="Customer using 9iceMoney banking app on phone and POS device" class="hero-showcase-img">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6kyqhXyJBad47qeQrAXyw3aWg3tkgtPq_Yhg6zsCDiakHAK8CBOkemmEHuadkkIU_CVvcVwtV7F9dlI3u-80z4FANCaMcT5Nh76Ybl8-JudxCVCSekxQI8rQpCBapouOEDQITxla5dxRI-aijTzS_7BxZsOPfL8xQV_4Exip_QowBIumhkzmARVQ5SBnD-t6-cJ2bxPLkibJIPnNE6MPne-s6WiQ-S2qvYdAbafvepv2HMsUGtyt7SccO_c7nP45NQjM" alt="Customer holding 9iceMoney banking app and payment terminal" class="hero-showcase-img">
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         COMPONENT: 3-CARD PRODUCT SHOWCASE SECTION
+         ======================================================================== -->
+    <section id="products" aria-labelledby="products-heading" class="component-product-showcase">
+      <div class="product-showcase-inner">
+        <!-- Section Header -->
+        <div class="product-showcase-header reveal-on-scroll fade-up">
+          <div class="product-badge-pill">
+            <span class="product-badge-dot"></span>
+            <span class="product-badge-text">OUR PRODUCTS</span>
+          </div>
+          <h2 id="products-heading" class="product-showcase-title">
+            Built for Everyday Banking & Growing Businesses
+          </h2>
+          <p class="product-showcase-subtext">
+            Choose the solution that fits your lifestyle — whether you are spending globally, managing store sales, or banking seamlessly on the go.
+          </p>
+        </div>
+
+        <!-- 3 Showcase Cards Grid -->
+        <div class="product-grid">
+
+          <!-- CARD 1: 9iceMoney Mastercard -->
+          <div class="product-card reveal-on-scroll fade-scale delay-100">
+            <div class="product-card-badge-row">
+              <span class="product-category-tag">Cards & Payments</span>
+              <span class="product-meta-tag">Physical & Virtual</span>
+            </div>
+
+            <!-- Mastercard High-Fidelity Mockup -->
+            <div style="height: 226px; width: 100%; border-radius: 20px; background: linear-gradient(145deg, #2a2e3d 0%, #151821 50%, #0c0e14 100%); padding: 22px 24px; position: relative; overflow: hidden; box-shadow: 0 18px 38px rgba(0,0,0,0.5), inset 0 1.5px 1px rgba(255,255,255,0.3); border: 1px solid rgba(255,255,255,0.18); display: flex; flex-direction: column; justify-content: space-between; margin-bottom: 28px; user-select: none;">
+              <div style="position: absolute; top: -60px; right: -40px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(255, 220, 85, 0.22) 0%, rgba(55, 56, 233, 0.15) 50%, transparent 75%); pointer-events: none; transform: rotate(25deg);"></div>
+              <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 45%; background: linear-gradient(0deg, rgba(0,0,0,0.35) 0%, transparent 100%); pointer-events: none;"></div>
+
+              <div style="display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 2;">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                  <div style="width: 40px; height: 29px; border-radius: 6px; background: linear-gradient(135deg, #ffe066 0%, #d4af37 55%, #aa771c 100%); border: 1px solid #7d5306; position: relative; box-shadow: 0 2px 4px rgba(0,0,0,0.4); overflow: hidden;">
+                    <div style="position: absolute; inset: 4px; border: 1px solid rgba(0,0,0,0.22); border-radius: 2px;"></div>
+                    <div style="position: absolute; top: 50%; left: 0; right: 0; height: 1px; background: rgba(0,0,0,0.3);"></div>
+                    <div style="position: absolute; left: 45%; top: 0; bottom: 0; width: 1px; background: rgba(0,0,0,0.3);"></div>
+                  </div>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.75)" stroke-width="2.2" stroke-linecap="round"><path d="M8.5 16.5a5 5 0 0 1 0-7"/><path d="M12 19a8.5 8.5 0 0 0 0-12"/><path d="M15.5 21.5a12 12 0 0 0 0-17"/></svg>
+                </div>
+                <div style="display: flex; align-items: center; gap: 7px;">
+                  <div style="width: 24px; height: 24px; border-radius: 7px; background: #2558e5; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; color: #ffffff;">9</div>
+                  <span style="font-size: 14px; font-weight: 800; color: #ffffff;">9iceMoney</span>
+                </div>
+              </div>
+
+              <div style="font-family: 'SF Mono', Monaco, Consolas, monospace; font-size: 18px; font-weight: 700; letter-spacing: 0.18em; color: #f8fafc; text-shadow: 0 2px 5px rgba(0,0,0,0.8); position: relative; z-index: 2; margin: 10px 0;">
+                5399 &nbsp;•••• &nbsp;•••• &nbsp;8842
+              </div>
+
+              <div style="display: flex; align-items: flex-end; justify-content: space-between; position: relative; z-index: 2;">
+                <div>
+                  <div style="font-size: 8px; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(255, 255, 255, 0.55); font-weight: 700; margin-bottom: 2px;">CARDHOLDER</div>
+                  <div style="font-size: 12px; font-weight: 800; color: #ffffff; letter-spacing: 0.06em; text-transform: uppercase;">ALEXANDER OKONKWO</div>
+                </div>
+                <div>
+                  <div style="font-size: 8px; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(255, 255, 255, 0.55); font-weight: 700; margin-bottom: 2px;">VALID THRU</div>
+                  <div style="font-size: 12px; font-weight: 800; color: #ffffff; letter-spacing: 0.05em;">08/29</div>
+                </div>
+                <div style="display: flex; align-items: center; position: relative; width: 48px; height: 30px;">
+                  <div style="width: 28px; height: 28px; border-radius: 50%; background: #eb001b; position: absolute; left: 0;"></div>
+                  <div style="width: 28px; height: 28px; border-radius: 50%; background: #ff5f00; opacity: 0.96; position: absolute; right: 0;"></div>
+                </div>
+              </div>
+            </div>
+
+            <h3 class="product-title">9iceMoney Mastercard</h3>
+            <p class="product-description">Spend seamlessly worldwide in Naira or USD. Accepted at millions of ATMs and top global merchants.</p>
+
+            <div class="product-features-list">
+              <div class="product-feature-item"><span class="feature-check-icon">✓</span><span>Instant physical & virtual issuance</span></div>
+              <div class="product-feature-item"><span class="feature-check-icon">✓</span><span>Zero maintenance fees</span></div>
+              <div class="product-feature-item"><span class="feature-check-icon">✓</span><span>Instant in-app card freeze & security</span></div>
+            </div>
+
+            <a href="#mastercard" class="product-link">
+              <span>Order Your Card</span>
+              <span style="font-size: 17px;">→</span>
+            </a>
+          </div>
+
+          <!-- CARD 2: Smart POS Terminal -->
+          <div class="product-card reveal-on-scroll fade-scale delay-200">
+            <div class="product-card-badge-row">
+              <span class="product-category-tag">Merchants & Agents</span>
+              <span class="product-meta-tag" style="color: var(--hero-yellow); font-weight: 700;">Instant Settlement</span>
+            </div>
+
+            <!-- POS Mockup Container -->
+            <div style="height: 226px; width: 100%; border-radius: 20px; background: radial-gradient(circle at 50% 30%, #1a3c8c 0%, #102359 100%); padding: 12px 16px; position: relative; overflow: hidden; box-shadow: 0 18px 38px rgba(0,0,0,0.5), inset 0 1px 1px rgba(255,255,255,0.25); border: 1px solid rgba(255,255,255,0.18); display: flex; align-items: center; justify-content: center; margin-bottom: 28px; user-select: none;">
+              <div style="width: 195px; background: linear-gradient(150deg, #4ea3ff 0%, #2578f5 60%, #155bc9 100%); border-radius: 22px 22px 18px 18px; padding: 7px 7px 9px; box-shadow: 0 14px 28px rgba(0,0,0,0.4), inset 0 1px 2px rgba(255,255,255,0.4); border: 1px solid rgba(255,255,255,0.3); display: flex; flex-direction: column;">
+                <div style="background: linear-gradient(180deg, #62b1ff 0%, #2e83f8 100%); border-radius: 15px 15px 8px 8px; padding: 5px 10px 6px; margin-bottom: 6px; display: flex; flex-direction: column; align-items: center; border: 1px solid rgba(255,255,255,0.3);">
+                  <svg width="20" height="13" viewBox="0 0 32 24" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"><path d="M11 19c2.8-2.6 4.5-6.3 4.5-10.4S13.8 1 11 0"/><path d="M16 21.5c4-3.5 6.5-8.8 6.5-14.5S20 0 16 0"/><path d="M21 24c5.2-4.5 8.5-11.2 8.5-18.7S26.2 0 21 0"/></svg>
+                  <div style="width: 100%; height: 3px; background: #0c152a; border-radius: 2px; margin-top: 3px;"></div>
+                </div>
+                <div style="background: #ffffff; border-radius: 12px; padding: 7px 9px 8px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 5px;">
+                  <div style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
+                    <div style="display: flex; align-items: center; gap: 3px;">
+                      <div style="width: 10px; height: 10px; border-radius: 2.5px; background: #2256e6; display: flex; align-items: center; justify-content: center; font-size: 6.5px; font-weight: 900; color: #ffffff;">9</div>
+                      <span style="font-size: 8.5px; font-weight: 800; color: #2256e6;">9iceMoney</span>
+                    </div>
+                    <span style="font-size: 7.5px; color: #64748b; font-weight: 700;">9:41</span>
+                  </div>
+                  <div style="text-align: center; margin: 1px 0;">
+                    <div style="font-size: 15px; font-weight: 900; color: #0f172a;">₦ 24,500</div>
+                    <div style="font-size: 7.5px; font-weight: 800; color: #059669; background: #ecfdf5; border: 1px solid #a7f3d0; padding: 2px 7px; border-radius: 999px; display: inline-flex; align-items: center; gap: 3px;">
+                      <span>✓</span> Payment Successful
+                    </div>
+                  </div>
+                  <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; width: 100%; text-align: center;">
+                    <div style="background: #f1f5f9; border-radius: 4px; padding: 2px 0; font-size: 6px; font-weight: 800; color: #1e293b;">Airtime</div>
+                    <div style="background: #f1f5f9; border-radius: 4px; padding: 2px 0; font-size: 6px; font-weight: 800; color: #1e293b;">Data</div>
+                    <div style="background: #f1f5f9; border-radius: 4px; padding: 2px 0; font-size: 6px; font-weight: 800; color: #1e293b;">Bills</div>
+                    <div style="background: #f1f5f9; border-radius: 4px; padding: 2px 0; font-size: 6px; font-weight: 800; color: #1e293b;">Transfer</div>
+                  </div>
+                  <div style="background: #2050dd; color: #ffffff; text-align: center; border-radius: 6px; font-size: 8.5px; font-weight: 800; padding: 3px 0; width: 100%;">Done</div>
+                </div>
+              </div>
+            </div>
+
+            <h3 class="product-title">Smart POS Terminal</h3>
+            <p class="product-description">Speed up store checkouts with instant settlement, long battery life, and ultra-low transaction fees.</p>
+
+            <div class="product-features-list">
+              <div class="product-feature-item"><span class="feature-check-icon">✓</span><span>Instant real-time settlement</span></div>
+              <div class="product-feature-item"><span class="feature-check-icon">✓</span><span>4G Dual-SIM & Wi-Fi connectivity</span></div>
+              <div class="product-feature-item"><span class="feature-check-icon">✓</span><span>Accepts all cards, USSD & QR</span></div>
+            </div>
+
+            <a href="#pos" class="product-link">
+              <span>Request POS Terminal</span>
+              <span style="font-size: 17px;">→</span>
+            </a>
+          </div>
+
+          <!-- CARD 3: Mobile Banking App -->
+          <div class="product-card reveal-on-scroll fade-scale delay-300">
+            <div class="product-card-badge-row">
+              <span class="product-category-tag">Smart Banking App</span>
+              <span class="product-meta-tag">iOS & Android • 4.9 ★</span>
+            </div>
+
+            <!-- Vertical Mobile Mockup Container -->
+            <div style="height: 226px; width: 100%; border-radius: 20px; background: radial-gradient(circle at 50% 30%, #1a3c8c 0%, #102359 100%); padding: 10px 16px 0; position: relative; overflow: hidden; box-shadow: 0 18px 38px rgba(0,0,0,0.5), inset 0 1px 1px rgba(255,255,255,0.25); border: 1px solid rgba(255,255,255,0.18); display: flex; align-items: flex-start; justify-content: center; margin-bottom: 28px; user-select: none;">
+              <div style="width: 172px; background: #0b0d13; border-radius: 22px 22px 0 0; padding: 5px 5px 0; box-shadow: 0 12px 28px rgba(0,0,0,0.5); display: flex; flex-direction: column; height: 100%;">
+                <div style="background: #f4f6fa; border-radius: 17px 17px 0 0; overflow: hidden; display: flex; flex-direction: column; width: 100%; height: 100%;">
+                  <div style="background: linear-gradient(180deg, #1742be 0%, #2558e5 100%); padding: 6px 9px 8px; color: #ffffff;">
+                    <div style="display: flex; justify-content: center; margin-bottom: 4px;">
+                      <div style="width: 46px; height: 10px; background: #000000; border-radius: 8px;"></div>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                      <div style="display: flex; align-items: center; gap: 4px;">
+                        <div style="width: 12px; height: 12px; border-radius: 3px; background: #ffffff; color: #1e4bd6; font-size: 7px; font-weight: 900; display: flex; align-items: center; justify-content: center;">9</div>
+                        <span style="font-size: 8.5px; font-weight: 800;">9iceMoney</span>
+                      </div>
+                    </div>
+                    <div>
+                      <div style="font-size: 6.5px; text-transform: uppercase; opacity: 0.8; font-weight: 700;">TOTAL BALANCE</div>
+                      <div style="font-size: 13.5px; font-weight: 900;">₦245,320.00</div>
+                    </div>
+                  </div>
+                  <div style="padding: 5px 7px; background: #ffffff; display: grid; grid-template-columns: repeat(4, 1fr); gap: 3px; text-align: center; border-bottom: 1px solid #edf2f7;">
+                    <div style="background: #f0f4ff; border-radius: 5px; padding: 3px 0;"><span style="font-size: 6.5px; font-weight: 800; color: #1e4bd6;">Send</span></div>
+                    <div style="background: #f0f4ff; border-radius: 5px; padding: 3px 0;"><span style="font-size: 6.5px; font-weight: 800; color: #1e4bd6;">Airtime</span></div>
+                    <div style="background: #f0f4ff; border-radius: 5px; padding: 3px 0;"><span style="font-size: 6.5px; font-weight: 800; color: #1e4bd6;">Data</span></div>
+                    <div style="background: #f0f4ff; border-radius: 5px; padding: 3px 0;"><span style="font-size: 6.5px; font-weight: 800; color: #1e4bd6;">Bills</span></div>
+                  </div>
+                  <div style="padding: 6px 7px; background: #f8fafc; display: flex; flex-direction: column; gap: 4px;">
+                    <div style="background: #ffffff; border-radius: 7px; padding: 4px 6px; display: flex; align-items: center; justify-content: space-between; border: 1px solid #e2e8f0;">
+                      <span style="font-size: 7.5px; font-weight: 800; color: #0f172a;">Daily Savings</span>
+                      <span style="font-size: 7.5px; font-weight: 800; color: #059669;">+16% APY</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <h3 class="product-title">Mobile Banking App</h3>
+            <p class="product-description">A complete bank in your pocket. Send money for free, automate utility bills, and earn daily compounding interest.</p>
+
+            <div class="product-features-list">
+              <div class="product-feature-item"><span class="feature-check-icon">✓</span><span>Up to 16% APY daily returns</span></div>
+              <div class="product-feature-item"><span class="feature-check-icon">✓</span><span>Zero-fee interbank transfers</span></div>
+              <div class="product-feature-item"><span class="feature-check-icon">✓</span><span>Biometric Face & Fingerprint ID</span></div>
+            </div>
+
+            <a href="#download" class="product-link">
+              <span>Download Mobile App</span>
+              <span style="font-size: 17px;">→</span>
+            </a>
+          </div>
+
+        </div>
       </div>
     </section>
 
@@ -677,7 +1054,7 @@
             <a href="#" class="app-badge-btn" aria-label="Get 9iceMoney on Google Play">
               <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.08 0.63C0.84 0.9 0.69 1.3 0.69 1.83V24.17C0.69 24.7 0.84 25.1 1.08 25.37L1.17 25.46L13.73 12.9V12.72L1.17 0.17L1.08 0.63Z" fill="#2196F3"/>
-                <path d="M17.91 17.08L13.73 12.9V12.72L17.91 8.54L18.01 8.6L22.97 11.42C24.38 12.22 24.38 13.53 22.97 14.34L18.01 17.16L17.91 17.08Z" fill="#FFC107"/>
+                <path d="M17.91 17.08L13.73 12.9V12.72L17.91 8.54L18.01 8.6L22.97 11.42C24.38 12.22 24.38 13.53 22.97 14.34L18.01 17.16L18.01 17.08Z" fill="#FFC107"/>
                 <path d="M18.01 17.08L13.73 12.81L1.08 25.46C1.55 25.96 2.33 26.02 3.23 25.52L18.01 17.08Z" fill="#F44336"/>
                 <path d="M18.01 8.54L3.23 0.1C2.33 -0.41 1.55 -0.34 1.08 0.16L13.73 12.81L18.01 8.54Z" fill="#4CAF50"/>
               </svg>
@@ -853,7 +1230,7 @@
         <div class="footer-links-column">
           <ul class="footer-nav-list">
             <li><a href="#" class="footer-nav-link">HOME</a></li>
-            <li><a href="#services" class="footer-nav-link">OUR PRODUCT</a></li>
+            <li><a href="#products" class="footer-nav-link">OUR PRODUCT</a></li>
             <li><a href="#services" class="footer-nav-link">SERVICE</a></li>
             <li><a href="#" class="footer-nav-link">TECHNOLOGIES</a></li>
             <li><a href="#contact" class="footer-nav-link">CONTACT US</a></li>
@@ -924,7 +1301,6 @@
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             entry.target.classList.add('is-visible');
-            // Unobserve once animated for performance optimization
             observer.unobserve(entry.target);
           }
         });
