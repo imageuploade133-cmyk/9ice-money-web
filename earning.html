@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agent Banking & Earning - 9iceMoney Personal & Business Banking</title>
+
+  <!-- Preconnect & Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       1. CORE DESIGN TOKENS & RESET
+       ========================================================================== */
+    :root {
+      --hero-blue: #3738e9;
+      --hero-yellow: #ffdc55;
+      --hero-yellow-hover: #ffe477;
+      --navy-dark: #0f1015;
+      --navy-card: #1c1e24;
+      --white: #ffffff;
+      --text-muted: rgba(255, 255, 255, 0.85);
+      --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --transition-base: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scrollbar-width: thin;
+      scrollbar-color: var(--hero-yellow) #2526bd;
+    }
+
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #2526bd;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--hero-yellow);
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--hero-yellow-hover);
+    }
+
+    body {
+      font-family: var(--font-family);
+      background: var(--hero-blue);
+      color: var(--white);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+      overflow-x: hidden;
+    }
+
+    /* Guaranteed visibility for all elements */
+    .reveal-on-scroll {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* ==========================================================================
+       2. COMPONENT: HEADER NAVBAR
+       ========================================================================== */
+    .component-navbar {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      width: min(100%, 1800px);
+      margin: 0 auto;
+      padding: clamp(16px, 2.2vw, 28px) clamp(24px, 4vw, 80px) 12px;
+      position: relative;
+      z-index: 100;
+    }
+
+    .nav-group {
+      display: flex;
+      align-items: center;
+      gap: clamp(18px, 2.2vw, 32px);
+    }
+
+    .nav-right-group {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: clamp(16px, 2vw, 28px);
+    }
+
+    .nav-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      transition: color var(--transition-base);
+      white-space: nowrap;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: var(--hero-yellow);
+    }
+
+    .nav-brand {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .brand-logo-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      padding: 0 8px;
+    }
+
+    .brand-logo-svg {
+      height: clamp(48px, 4.5vw, 60px);
+      width: auto;
+      display: block;
+      transition: transform var(--transition-base);
+    }
+
+    .brand-logo-link:hover .brand-logo-svg {
+      transform: scale(1.05);
+    }
+
+    .nav-btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 22px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(255, 255, 255, 0.45);
+      color: var(--white);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      transition: all var(--transition-base);
+      white-space: nowrap;
+    }
+
+    .nav-btn-primary:hover {
+      background: rgba(255, 255, 255, 0.18);
+      border-color: var(--white);
+      transform: translateY(-1px);
+    }
+
+    /* ==========================================================================
+       3. HERO SECTION
+       ========================================================================== */
+    .earning-hero-section {
+      padding: clamp(48px, 6vw, 80px) clamp(20px, 4vw, 80px);
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 48px;
+      align-items: center;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .earning-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 18px;
+      border-radius: 999px;
+      background: #ffffff;
+      color: #1607d4;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .hero-heading {
+      font-size: clamp(32px, 4vw, 54px);
+      font-weight: 900;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      letter-spacing: -0.03em;
+      color: #ffffff;
+    }
+
+    .hero-subtext {
+      font-size: 18px;
+      color: rgba(255,255,255,0.9);
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+
+    .btn-cluster {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .btn-yellow-cta {
+      background: var(--hero-yellow);
+      color: #000000;
+      padding: 14px 28px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 15px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+      transition: background var(--transition-base);
+    }
+
+    .btn-yellow-cta:hover {
+      background: var(--hero-yellow-hover);
+    }
+
+    .btn-outline-cta {
+      background: rgba(255,255,255,0.15);
+      color: #ffffff;
+      padding: 14px 28px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 15px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: background var(--transition-base);
+    }
+
+    .btn-outline-cta:hover {
+      background: rgba(255,255,255,0.25);
+    }
+
+    .hero-pos-card {
+      background: var(--hero-yellow);
+      border-radius: 28px;
+      padding: 28px;
+      color: #0f172a;
+      width: 100%;
+      max-width: 420px;
+      box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+    }
+
+    /* ==========================================================================
+       4. CALCULATOR SECTION
+       ========================================================================== */
+    .calculator-section {
+      background: #ffffff;
+      color: #0f172a;
+      padding: clamp(60px, 7vw, 100px) clamp(20px, 4vw, 80px);
+    }
+
+    .calculator-container {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .calc-header {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 48px;
+    }
+
+    .calc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 36px;
+      align-items: stretch;
+    }
+
+    .calc-input-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 28px;
+      padding: clamp(28px, 3.5vw, 40px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+    }
+
+    .calc-output-box {
+      background: #1a1a28;
+      color: #ffffff;
+      border-radius: 28px;
+      padding: clamp(28px, 3.5vw, 40px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 20px 45px rgba(0,0,0,0.25);
+    }
+
+    .calc-slider {
+      width: 100%;
+      height: 8px;
+      border-radius: 4px;
+      background: #cbd5e1;
+      outline: none;
+      accent-color: #3738e9;
+      cursor: pointer;
+      margin: 12px 0 6px;
+    }
+
+    .preset-btn {
+      background: #e2e8f0;
+      color: #0f172a;
+      border: none;
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all var(--transition-base);
+    }
+
+    .preset-btn:hover {
+      background: #3738e9;
+      color: #ffffff;
+    }
+
+    /* ==========================================================================
+       5. STREAMS SECTION
+       ========================================================================== */
+    .streams-section {
+      background: #f1f5f9;
+      color: #0f172a;
+      padding: clamp(60px, 7vw, 100px) clamp(20px, 4vw, 80px);
+    }
+
+    .streams-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 24px;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .stream-card {
+      background: #ffffff;
+      padding: 28px;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /* ==========================================================================
+       6. POS HARDWARE SPECS SECTION
+       ========================================================================== */
+    .pos-specs-section {
+      padding: clamp(60px, 7vw, 100px) clamp(20px, 4vw, 80px);
+      background: var(--hero-blue);
+      color: #ffffff;
+    }
+
+    .pos-specs-box {
+      max-width: 1280px;
+      margin: 0 auto;
+      background: #1c208a;
+      border-radius: 32px;
+      padding: clamp(36px, 5vw, 64px);
+      box-shadow: 0 25px 60px rgba(0,0,0,0.3);
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 40px;
+      align-items: center;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    /* ==========================================================================
+       7. ONBOARDING SECTION
+       ========================================================================== */
+    .onboarding-section {
+      background: #f8fafc;
+      color: #0f172a;
+      padding: clamp(60px, 7vw, 100px) clamp(20px, 4vw, 80px);
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .step-card {
+      background: #ffffff;
+      padding: 32px;
+      border-radius: 24px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      border: 1px solid #e2e8f0;
+    }
+
+    .step-num-badge {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--hero-blue);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: 900;
+      margin-bottom: 20px;
+    }
+
+    .step-num-badge.yellow {
+      background: var(--hero-yellow);
+      color: #000000;
+    }
+
+    /* ==========================================================================
+       8. TESTIMONIALS SECTION
+       ========================================================================== */
+    .testimonials-section {
+      padding: clamp(60px, 7vw, 100px) clamp(20px, 4vw, 80px);
+      max-width: 1280px;
+      margin: 0 auto;
+      background: #ffffff;
+      color: #0f172a;
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 28px;
+    }
+
+    .testimonial-card {
+      background: #f8fafc;
+      color: #0f172a;
+      padding: 28px;
+      border-radius: 20px;
+      border: 1px solid #e2e8f0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /* ==========================================================================
+       9. FAQ SECTION
+       ========================================================================== */
+    .earning-faq-section {
+      background: #f1f5f9;
+      color: #0f172a;
+      padding: clamp(60px, 7vw, 100px) clamp(20px, 4vw, 80px);
+    }
+
+    .faq-container {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .faq-item-card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 20px 24px;
+      margin-bottom: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      border: 1px solid #e2e8f0;
+    }
+
+    .faq-question-btn {
+      width: 100%;
+      background: none;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-align: left;
+      font-size: 16px;
+      font-weight: 700;
+      color: #0f172a;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    .faq-answer-body {
+      margin-top: 12px;
+      font-size: 14px;
+      color: #475569;
+      line-height: 1.6;
+      display: none;
+    }
+
+    .faq-answer-body.show {
+      display: block;
+    }
+
+    /* ==========================================================================
+       10. CONVERSION CTA SECTION
+       ========================================================================== */
+    .earning-cta-section {
+      padding: clamp(60px, 7vw, 100px) clamp(20px, 4vw, 80px);
+      text-align: center;
+      background: var(--hero-blue);
+      color: #ffffff;
+    }
+
+    /* ==========================================================================
+       11. COMPONENT: FOOTER
+       ========================================================================== */
+    .component-footer {
+      background: var(--navy-dark);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding: clamp(48px, 5vw, 72px) clamp(30px, 5vw, 100px) 36px;
+      width: 100%;
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .footer-watermark {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      font-size: clamp(5rem, 14.5vw, 16vw);
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      line-height: 0.85;
+      color: rgba(255, 255, 255, 0.1);
+      text-align: center;
+      text-transform: uppercase;
+      white-space: nowrap;
+      pointer-events: none;
+      user-select: none;
+      z-index: 0;
+    }
+
+    .footer-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 48px;
+      justify-content: space-between;
+      align-items: start;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .footer-links-column {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 32px;
+    }
+
+    .footer-nav-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .footer-nav-link {
+      color: #cbd5e1;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: color var(--transition-base);
+    }
+
+    .footer-nav-link:hover {
+      color: var(--hero-yellow);
+    }
+
+    .footer-newsletter-box {
+      max-width: 440px;
+      margin-left: auto;
+      width: 100%;
+    }
+
+    .newsletter-form {
+      display: flex;
+      align-items: center;
+      background: var(--navy-card);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 4px;
+      margin-bottom: 24px;
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+    }
+
+    .newsletter-input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      outline: none;
+      padding: 12px 16px;
+      font-size: 14px;
+      color: var(--white);
+      font-family: inherit;
+      min-width: 0;
+    }
+
+    .newsletter-btn {
+      background: var(--hero-yellow);
+      color: #090909;
+      border: none;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 13px;
+      padding: 10px 18px;
+      cursor: pointer;
+      transition: background var(--transition-base);
+    }
+
+    .newsletter-btn:hover {
+      background: var(--hero-yellow-hover);
+    }
+
+    .footer-social-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .social-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: var(--white);
+      color: #0f1015;
+      text-decoration: none;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      transition: transform var(--transition-base), background-color var(--transition-base);
+    }
+
+    .social-btn:hover {
+      transform: translateY(-2px);
+      background: var(--hero-yellow);
+    }
+
+    .footer-copyright {
+      padding-top: 36px;
+      text-align: center;
+      color: #6b7280;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================================================
+       COMPONENT: HEADER NAVIGATION BAR
+       ======================================================================== -->
+  <header class="component-navbar">
+    <nav aria-label="Main Navigation" class="nav-group">
+      <a href="about.html" class="nav-link">About Us</a>
+      <a href="index.html#services" class="nav-link">Services</a>
+      <a href="index.html#products" class="nav-link">Products</a>
+    </nav>
+
+    <div class="nav-brand">
+      <a href="index.html" class="brand-logo-link" aria-label="9iceMoney Home">
+        <svg width="220" height="50" viewBox="0 0 220 50" fill="none" xmlns="http://www.w3.org/2000/svg" class="brand-logo-svg">
+          <rect x="2" y="5" width="40" height="40" rx="12" fill="#FFDC55"/>
+          <path d="M26.5 16.5C26.5 14.29 24.71 12.5 22.5 12.5C20.29 12.5 18.5 14.29 18.5 16.5C18.5 18.71 20.29 20.5 22.5 20.5C24.71 20.5 26.5 18.71 26.5 16.5ZM22.5 24.5C18.08 24.5 14.5 20.92 14.5 16.5C14.5 12.08 18.08 8.5 22.5 8.5C26.92 8.5 30.5 12.08 30.5 16.5V28.5C30.5 32.92 26.92 36.5 22.5 36.5C18.08 36.5 14.5 32.92 14.5 28.5H18.5C18.5 30.71 20.29 32.5 22.5 32.5C24.71 32.5 26.5 30.71 26.5 28.5V24.5H22.5Z" fill="#3738E9"/>
+          <text x="52" y="33" fill="#FFFFFF" font-family="'Inter', sans-serif" font-weight="900" font-size="25" letter-spacing="-0.03em">9iceMoney</text>
+        </svg>
+      </a>
+    </div>
+
+    <div class="nav-right-group">
+      <div class="nav-group">
+        <a href="support.html" class="nav-link">Support</a>
+        <a href="index.html#review" class="nav-link">Review</a>
+        <a href="earning.html" class="nav-link active">Earning</a>
+      </div>
+      <a href="index.html#get-app" class="nav-btn-primary">Get app</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- SECTION 1: EARNING HERO -->
+    <section class="earning-hero-section">
+      <div>
+        <div class="earning-badge">
+          <span style="width: 6px; height: 6px; border-radius: 50%; background: #1607d4;"></span>
+          <span>AGENT BANKING & MERCHANT EARNINGS • CBN LICENSED</span>
+        </div>
+        <h1 class="hero-heading">
+          Turn Every Transaction Into Daily Profit with <span style="color: var(--hero-yellow);">9iceMoney Smart POS</span>
+        </h1>
+        <p class="hero-subtext">
+          Empower your shop, kiosk, or enterprise with Africa's fastest 4G POS terminal. Earn industry-leading commissions on cash withdrawals, bank transfers, utility bills, airtime, and sports betting.
+        </p>
+
+        <div class="btn-cluster">
+          <a href="#calculator" class="btn-yellow-cta">
+            <span class="material-symbols-outlined">point_of_sale</span>
+            <span>Request Smart POS Terminal</span>
+          </a>
+          <a href="#calculator" class="btn-outline-cta">
+            <span class="material-symbols-outlined">calculate</span>
+            <span>Calculate Monthly Earnings</span>
+          </a>
+        </div>
+      </div>
+
+      <div style="display: flex; justify-content: center;">
+        <div class="hero-pos-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+            <span style="font-size: 11px; font-weight: 800; background: #ffffff; padding: 4px 12px; border-radius: 999px; text-transform: uppercase;">4G NFC TERMINAL</span>
+            <span class="material-symbols-outlined" style="color: #3738e9;">contactless</span>
+          </div>
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8i7ejgdCCVs8romPijFo7fiLzZWUgFwtwuseOVypebKuZftw2lVm8b5tm2BE67x9ykO-ii2vmbXMD5KsEq45e-snozP36b52jZj4w5gFV-Pp9oRnYRg6m2QPuZOvu4wCqhk95PKVwQ42PMZeTXRvyfOLaBLj7Yi_2fdfrD622uwklVtwWGsc6gOqVgp0VbMB2Lw4LUiraS_QNGGcp2cGPpZbkLDGnTzSEo2EWH9totY6LWchKFWsD7g" alt="9iceMoney Merchant Agent" style="width: 100%; height: 260px; object-fit: contain; margin-bottom: 16px;">
+          <div style="background: #ffffff; padding: 16px; border-radius: 16px;">
+            <div style="font-size: 12px; color: #64748b; font-weight: 600;">Today's Commission Float</div>
+            <div style="font-size: 26px; font-weight: 900; color: #3738e9; margin: 2px 0;">₦ 38,450.00</div>
+            <div style="font-size: 12px; font-weight: 700; color: #059669;">+18.4% today</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: INTERACTIVE CALCULATOR -->
+    <section class="calculator-section" id="calculator">
+      <div class="calculator-container">
+        <div class="calc-header">
+          <span style="font-size: 11px; font-weight: 800; color: #1607d4; letter-spacing: 0.12em; text-transform: uppercase;">TRANSPARENT REVENUE ENGINE</span>
+          <h2 style="font-size: clamp(28px, 3vw, 42px); font-weight: 900; margin-top: 6px;">How Much Can You Earn Every Month?</h2>
+          <p style="font-size: 16px; color: #64748b; margin-top: 8px;">Adjust your daily transaction estimates to see instant net earnings.</p>
+        </div>
+
+        <div class="calc-grid">
+          <div class="calc-input-box">
+            <div style="margin-bottom: 24px;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <label style="font-size: 14px; font-weight: 700;">Daily Cash Withdrawals</label>
+                <strong style="font-size: 20px; color: #3738e9;" id="calcWVal">50 txns / day</strong>
+              </div>
+              <input type="range" id="calcW" min="10" max="250" value="50" step="5" class="calc-slider">
+              <span style="font-size: 12px; color: #64748b;">Avg. ₦120 commission/txn</span>
+            </div>
+
+            <div style="margin-bottom: 24px;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <label style="font-size: 14px; font-weight: 700;">Inter-bank Transfers</label>
+                <strong style="font-size: 20px; color: #3738e9;" id="calcTVal">35 txns / day</strong>
+              </div>
+              <input type="range" id="calcT" min="5" max="200" value="35" step="5" class="calc-slider">
+              <span style="font-size: 12px; color: #64748b;">Avg. ₦65 commission/txn</span>
+            </div>
+
+            <div style="margin-bottom: 24px;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <label style="font-size: 14px; font-weight: 700;">Weekly Utility & VTU Volume</label>
+                <strong style="font-size: 20px; color: #3738e9;" id="calcBVal">₦150,000 / wk</strong>
+              </div>
+              <input type="range" id="calcB" min="20000" max="1000000" value="150000" step="10000" class="calc-slider">
+              <span style="font-size: 12px; color: #64748b;">3.5% instant rebate</span>
+            </div>
+
+            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+              <button class="preset-btn" onclick="setPreset(25, 15, 80000)">Corner Shop</button>
+              <button class="preset-btn" onclick="setPreset(75, 50, 250000)">Market Stall</button>
+              <button class="preset-btn" onclick="setPreset(180, 120, 650000)">Super Agent</button>
+            </div>
+          </div>
+
+          <div class="calc-output-box">
+            <div>
+              <span style="font-size: 11px; font-weight: 800; color: var(--hero-yellow); letter-spacing: 0.1em; text-transform: uppercase;">PROJECTED NET REVENUE</span>
+              <div style="font-size: clamp(32px, 3.5vw, 54px); font-weight: 900; color: var(--hero-yellow); margin: 12px 0 4px;" id="calcTotal">₦ 284,500</div>
+              <span style="font-size: 13px; opacity: 0.8;">Deposited straight into your Tier-3 wallet daily.</span>
+
+              <div style="margin-top: 28px; border-top: 1px solid rgba(255,255,255,0.15); padding-top: 16px; display: flex; flex-direction: column; gap: 10px; font-size: 14px;">
+                <div style="display: flex; justify-content: space-between;">
+                  <span>Withdrawal Earnings:</span>
+                  <strong id="bWithdrawals">₦ 180,000</strong>
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                  <span>Transfer Fees Retained:</span>
+                  <strong id="bTransfers">₦ 68,250</strong>
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                  <span>Bill Commissions:</span>
+                  <strong id="bBills">₦ 36,250</strong>
+                </div>
+              </div>
+            </div>
+
+            <a href="#onboarding" style="background: var(--hero-yellow); color: #000; text-align: center; padding: 14px; border-radius: 999px; font-weight: 800; font-size: 15px; text-decoration: none; margin-top: 24px; box-shadow: 0 4px 16px rgba(0,0,0,0.2);">
+              Claim This Earning Tier Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: 4 EARNING STREAMS -->
+    <section class="streams-section">
+      <div style="text-align: center; max-width: 720px; margin: 0 auto 48px;">
+        <span style="font-size: 11px; font-weight: 800; color: #1607d4; letter-spacing: 0.12em; text-transform: uppercase;">MULTI-CHANNEL CASH FLOW</span>
+        <h2 style="font-size: clamp(28px, 3vw, 42px); font-weight: 900; margin-top: 6px;">Four Ways 9iceMoney Puts Cash in Your Pocket</h2>
+      </div>
+
+      <div class="streams-grid">
+        <div class="stream-card">
+          <div>
+            <span class="material-symbols-outlined" style="font-size: 32px; color: #3738e9; margin-bottom: 12px;">payments</span>
+            <h3 style="font-size: 18px; font-weight: 800; margin-bottom: 6px;">Cash-In & Cash-Out</h3>
+            <p style="font-size: 13.5px; color: #64748b; line-height: 1.5;">Earn up to ₦150 per cash withdrawal. Ultra-fast 1.8-second card reads with audio chimes.</p>
+          </div>
+          <span style="font-size: 11px; font-weight: 800; background: #eaf0ff; color: #1607d4; padding: 4px 10px; border-radius: 999px; width: fit-content; margin-top: 16px;">UP TO ₦150 / TXN</span>
+        </div>
+
+        <div class="stream-card">
+          <div>
+            <span class="material-symbols-outlined" style="font-size: 32px; color: #3738e9; margin-bottom: 12px;">lightbulb</span>
+            <h3 style="font-size: 18px; font-weight: 800; margin-bottom: 6px;">Utility & DisCo Tokens</h3>
+            <p style="font-size: 13.5px; color: #64748b; line-height: 1.5;">Print electricity tokens for IKEDC, EKEDC, IBEDC with automated instant meter recharge validation.</p>
+          </div>
+          <span style="font-size: 11px; font-weight: 800; background: #eaf0ff; color: #1607d4; padding: 4px 10px; border-radius: 999px; width: fit-content; margin-top: 16px;">2.5% INSTANT REBATE</span>
+        </div>
+
+        <div class="stream-card">
+          <div>
+            <span class="material-symbols-outlined" style="font-size: 32px; color: #3738e9; margin-bottom: 12px;">wifi_tethering</span>
+            <h3 style="font-size: 18px; font-weight: 800; margin-bottom: 6px;">Airtime & 4G Data VTU</h3>
+            <p style="font-size: 13.5px; color: #64748b; line-height: 1.5;">Instant direct top-ups for MTN, Airtel, Glo, and 9mobile with volume discounts.</p>
+          </div>
+          <span style="font-size: 11px; font-weight: 800; background: #eaf0ff; color: #1607d4; padding: 4px 10px; border-radius: 999px; width: fit-content; margin-top: 16px;">UP TO 4.5% COMMISSION</span>
+        </div>
+
+        <div class="stream-card">
+          <div>
+            <span class="material-symbols-outlined" style="font-size: 32px; color: #3738e9; margin-bottom: 12px;">tv</span>
+            <h3 style="font-size: 18px; font-weight: 800; margin-bottom: 6px;">Betting & Cable TV</h3>
+            <p style="font-size: 13.5px; color: #64748b; line-height: 1.5;">Fund Bet9ja, SportyBet, and DSTV/GOtv decoders without network delay.</p>
+          </div>
+          <span style="font-size: 11px; font-weight: 800; background: #eaf0ff; color: #1607d4; padding: 4px 10px; border-radius: 999px; width: fit-content; margin-top: 16px;">INSTANT DISPENSE</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: HARDWARE & POS SPECS -->
+    <section class="pos-specs-section">
+      <div class="pos-specs-box">
+        <div>
+          <span style="font-size: 11px; font-weight: 800; color: var(--hero-yellow); letter-spacing: 0.1em; text-transform: uppercase;">MIL-SPEC MARKET DURABILITY</span>
+          <h2 style="font-size: clamp(28px, 3vw, 42px); font-weight: 900; margin: 8px 0 16px; line-height: 1.2;">Built for Nigerian Markets: The 9iceMoney Smart POS Terminal</h2>
+          <p style="font-size: 15px; opacity: 0.9; line-height: 1.6; margin-bottom: 24px;">
+            Engineered specifically for street trade, high-footfall open markets, and corporate retail counters.
+          </p>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 24px;">
+            <div>
+              <strong style="color: var(--hero-yellow); display: block; font-size: 15px;">Dual-SIM 4G Roaming</strong>
+              <span style="font-size: 13px; opacity: 0.85;">MTN & Airtel auto-failover</span>
+            </div>
+            <div>
+              <strong style="color: var(--hero-yellow); display: block; font-size: 15px;">5,200mAh Heavy Battery</strong>
+              <span style="font-size: 13px; opacity: 0.85;">Up to 72 hours operational standby</span>
+            </div>
+            <div>
+              <strong style="color: var(--hero-yellow); display: block; font-size: 15px;">Loud Audio Speaker</strong>
+              <span style="font-size: 13px; opacity: 0.85;">Audible payment confirmations</span>
+            </div>
+            <div>
+              <strong style="color: var(--hero-yellow); display: block; font-size: 15px;">Fast Thermal Printer</strong>
+              <span style="font-size: 13px; opacity: 0.85;">Free continuous roll delivery</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="background: #ffffff; color: #0f172a; border-radius: 24px; padding: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
+          <div style="background: #3738e9; color: #ffffff; border-radius: 16px; padding: 20px; text-align: center; margin-bottom: 16px;">
+            <span style="font-size: 10px; font-weight: 800; color: var(--hero-yellow); text-transform: uppercase;">TAP / INSERT / SCAN</span>
+            <div style="font-size: 36px; font-weight: 900; margin: 4px 0;">₦ 24,500</div>
+            <span style="background: rgba(255,255,255,0.2); padding: 4px 12px; border-radius: 999px; font-size: 12px; font-weight: 700;">✓ Payment Approved (0.9s)</span>
+          </div>
+          <div style="font-size: 12px; color: #64748b; line-height: 1.8; text-align: center; font-weight: 600;">
+            Card Supported: Verve, Mastercard, Visa<br>
+            CBN & NIBSS Certified Terminal
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: 3-STEP ONBOARDING -->
+    <section class="onboarding-section" id="onboarding">
+      <div style="text-align: center; max-width: 600px; margin: 0 auto 48px;">
+        <span style="font-size: 11px; font-weight: 800; color: #1607d4; letter-spacing: 0.12em; text-transform: uppercase;">FAST TRACK ONBOARDING</span>
+        <h2 style="font-size: clamp(28px, 3vw, 42px); font-weight: 900; margin-top: 6px;">From Registration to First Profit in 48 Hours</h2>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num-badge">1</div>
+          <h3 style="font-size: 20px; font-weight: 800; margin-bottom: 8px;">Register in 2 Minutes</h3>
+          <p style="font-size: 14px; color: #64748b; line-height: 1.5;">Download the 9iceMoney Agent app. Complete identity check with BVN & NIN for instant Tier-3 verification.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-num-badge yellow">2</div>
+          <h3 style="font-size: 20px; font-weight: 800; margin-bottom: 8px;">Doorstep Delivery</h3>
+          <p style="font-size: 14px; color: #64748b; line-height: 1.5;">Your configured POS terminal is dispatched via express courier to your shop address within 24 to 48 hours.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-num-badge">3</div>
+          <h3 style="font-size: 20px; font-weight: 800; margin-bottom: 8px;">Fund Float & Earn</h3>
+          <p style="font-size: 14px; color: #64748b; line-height: 1.5;">Transfer trading capital into your virtual account and process your first withdrawal. Commissions credit immediately.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: MERCHANT TESTIMONIALS -->
+    <section class="testimonials-section">
+      <div style="text-align: center; max-width: 600px; margin: 0 auto 48px;">
+        <span style="font-size: 11px; font-weight: 800; color: #1607d4; letter-spacing: 0.12em; text-transform: uppercase;">COMMUNITY TRUSTED</span>
+        <h2 style="font-size: clamp(28px, 3vw, 42px); font-weight: 900; margin-top: 6px;">Banking the Heartbeat of West Africa</h2>
+      </div>
+
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <p style="font-size: 14px; color: #334155; line-height: 1.6; font-style: italic;">"Before 9iceMoney, other terminals kept giving 'Issuer inoperative' during Friday rush hours. The dual SIM picks network instantly. My monthly profit has jumped over ₦320,000."</p>
+          <div style="margin-top: 20px; border-top: 1px solid #e2e8f0; padding-top: 12px;">
+            <strong style="font-size: 15px; color: #0f172a; display: block;">Alhaji Mustapha</strong>
+            <span style="font-size: 12px; color: #64748b;">Grain Merchant • Dawanau Market, Kano</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <p style="font-size: 14px; color: #334155; line-height: 1.6; font-style: italic;">"The automatic 8:00 PM commission payout is my favorite feature. I don't have to call anyone or log reconciliation tickets. The loud speaker also protects against fraud."</p>
+          <div style="margin-top: 20px; border-top: 1px solid #e2e8f0; padding-top: 12px;">
+            <strong style="font-size: 15px; color: #0f172a; display: block;">Chidinma "Chichi" Okafor</strong>
+            <span style="font-size: 12px; color: #64748b;">Electronics Retailer • Alaba Int'l, Lagos</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <p style="font-size: 14px; color: #334155; line-height: 1.6; font-style: italic;">"I started with one POS kiosk outside Onitsha Main Market. Today I manage five sub-agents across Anambra state using the 9iceMoney super-agent dashboard."</p>
+          <div style="margin-top: 20px; border-top: 1px solid #e2e8f0; padding-top: 12px;">
+            <strong style="font-size: 15px; color: #0f172a; display: block;">Emeka Nwachukwu</strong>
+            <span style="font-size: 12px; color: #64748b;">Cluster Super Agent • Onitsha Main Market</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: FAQ ACCORDION -->
+    <section class="earning-faq-section">
+      <div class="faq-container">
+        <div style="text-align: center; margin-bottom: 40px;">
+          <span style="font-size: 11px; font-weight: 800; color: #1607d4; letter-spacing: 0.12em; text-transform: uppercase;">CLEAR ANSWERS</span>
+          <h2 style="font-size: clamp(28px, 3vw, 42px); font-weight: 900; margin-top: 6px;">Frequently Asked Questions</h2>
+        </div>
+
+        <div>
+          <div class="faq-item-card">
+            <button class="faq-question-btn" onclick="toggleFaq(this)">
+              <span>What are the exact requirements to obtain a 9iceMoney POS?</span>
+              <span class="material-symbols-outlined">expand_more</span>
+            </button>
+            <div class="faq-answer-body">
+              All you need is an active Nigerian phone number, your BVN or NIN, a valid utility bill or verifiable business location, and a passport photograph.
+            </div>
+          </div>
+
+          <div class="faq-item-card">
+            <button class="faq-question-btn" onclick="toggleFaq(this)">
+              <span>How and when are commissions paid into my account?</span>
+              <span class="material-symbols-outlined">expand_more</span>
+            </button>
+            <div class="faq-answer-body">
+              Commissions are calculated in real time. You can choose to have commissions deposited instantly into your float wallet or swept automatically into your bank account every evening at 8:00 PM.
+            </div>
+          </div>
+
+          <div class="faq-item-card">
+            <button class="faq-question-btn" onclick="toggleFaq(this)">
+              <span>What happens if a customer transaction fails or network drops?</span>
+              <span class="material-symbols-outlined">expand_more</span>
+            </button>
+            <div class="faq-answer-body">
+              Our direct integration with the NIBSS central switch guarantees automated instant auto-reversals within 15 to 60 minutes.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: CONVERSION CTA -->
+    <section class="earning-cta-section">
+      <div style="max-width: 680px; margin: 0 auto;">
+        <span style="font-size: 11px; font-weight: 800; color: var(--hero-yellow); letter-spacing: 0.12em; text-transform: uppercase;">GET STARTED TODAY</span>
+        <h2 style="font-size: clamp(28px, 3.5vw, 48px); font-weight: 900; margin: 8px 0 16px; line-height: 1.15; color: #ffffff;">
+          Ready to Turn Your Shop Into a Community Bank?
+        </h2>
+        <p style="font-size: 16px; opacity: 0.9; margin-bottom: 32px; color: #ffffff;">
+          Join over 45,000 successful Nigerian retailers, shop owners, and agents growing their daily income with 9iceMoney.
+        </p>
+        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+          <a href="#onboarding" class="btn-yellow-cta">Order Your Smart POS</a>
+          <a href="index.html#get-app" class="btn-outline-cta">Download Agent App</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       COMPONENT: FOOTER
+       ======================================================================== -->
+  <footer class="component-footer">
+    <div aria-hidden="true" class="footer-watermark">9ICE MONEY</div>
+
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-links-column">
+          <ul class="footer-nav-list">
+            <li><a href="index.html" class="footer-nav-link">HOME</a></li>
+            <li><a href="index.html#products" class="footer-nav-link">OUR PRODUCT</a></li>
+            <li><a href="index.html#services" class="footer-nav-link">SERVICE</a></li>
+            <li><a href="index.html#" class="footer-nav-link">TECHNOLOGIES</a></li>
+            <li><a href="index.html#contact" class="footer-nav-link">CONTACT US</a></li>
+          </ul>
+          <ul class="footer-nav-list">
+            <li><a href="index.html#privacy" class="footer-nav-link">PRIVACY POLICY</a></li>
+            <li><a href="terms.html" class="footer-nav-link">TERM AND CONDITION</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-newsletter-box">
+          <h4 style="margin: 0 0 8px; font-size: 20px; font-weight: 700;">Join Our Newsletter</h4>
+          <p style="margin: 0 0 20px; color: #9ca3af; font-size: 14px; font-weight: 400; line-height: 1.4;">
+            Keep up to date with everything 9iceMoney
+          </p>
+
+          <form onsubmit="event.preventDefault();" class="newsletter-form">
+            <input type="email" placeholder="Enter your email" aria-label="Email address" class="newsletter-input" required>
+            <button type="submit" aria-label="Subscribe to newsletter" class="newsletter-btn">Join</button>
+          </form>
+
+          <div class="footer-social-group">
+            <a href="#" aria-label="X (Twitter)" class="social-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="Instagram" class="social-btn">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="Facebook" class="social-btn">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="Google" class="social-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-copyright">
+        <p>9ICEMONEY, 2025 ALL RIGHTS RESERVED.</p>
+        <p style="margin-top: 4px; opacity: 0.85; font-size: 11px;">ADS DEVELOPMENT & SOFTWARE RC:3569383</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const calcW = document.getElementById('calcW');
+    const calcT = document.getElementById('calcT');
+    const calcB = document.getElementById('calcB');
+
+    function updateCalc() {
+      const w = parseInt(calcW.value, 10);
+      const t = parseInt(calcT.value, 10);
+      const b = parseInt(calcB.value, 10);
+
+      document.getElementById('calcWVal').innerText = `${w} txns / day`;
+      document.getElementById('calcTVal').innerText = `${t} txns / day`;
+      document.getElementById('calcBVal').innerText = `₦${b.toLocaleString()} / wk`;
+
+      const wEarn = w * 120 * 30;
+      const tEarn = t * 65 * 30;
+      const bEarn = Math.round(b * 0.035 * 4.3);
+      const total = wEarn + tEarn + bEarn;
+
+      document.getElementById('calcTotal').innerText = `₦ ${total.toLocaleString()}`;
+      document.getElementById('bWithdrawals').innerText = `₦ ${wEarn.toLocaleString()}`;
+      document.getElementById('bTransfers').innerText = `₦ ${tEarn.toLocaleString()}`;
+      document.getElementById('bBills').innerText = `₦ ${bEarn.toLocaleString()}`;
+    }
+
+    function setPreset(w, t, b) {
+      calcW.value = w;
+      calcT.value = t;
+      calcB.value = b;
+      updateCalc();
+    }
+
+    function toggleFaq(btn) {
+      const answer = btn.nextElementSibling;
+      const isVisible = answer.classList.contains('show');
+      document.querySelectorAll('.faq-answer-body').forEach(el => el.classList.remove('show'));
+      if (!isVisible) {
+        answer.classList.add('show');
+      }
+    }
+
+    calcW.addEventListener('input', updateCalc);
+    calcT.addEventListener('input', updateCalc);
+    calcB.addEventListener('input', updateCalc);
+  </script>
+</body>
+</html>

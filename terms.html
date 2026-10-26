@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms & Conditions - 9iceMoney Personal & Business Banking</title>
+
+  <!-- Preconnect & Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       1. CORE DESIGN TOKENS & RESET
+       ========================================================================== */
+    :root {
+      --hero-blue: #3738e9;
+      --hero-yellow: #ffdc55;
+      --hero-yellow-hover: #ffe477;
+      --navy-dark: #0f1015;
+      --navy-card: #1c1e24;
+      --white: #ffffff;
+      --text-muted: rgba(255, 255, 255, 0.85);
+      --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --transition-base: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scrollbar-width: thin;
+      scrollbar-color: var(--hero-yellow) #2526bd;
+    }
+
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #2526bd;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--hero-yellow);
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--hero-yellow-hover);
+    }
+
+    body {
+      font-family: var(--font-family);
+      background: var(--hero-blue);
+      color: var(--white);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+      overflow-x: hidden;
+    }
+
+    /* Guaranteed visibility */
+    .reveal-on-scroll {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* ==========================================================================
+       2. COMPONENT: HEADER NAVBAR
+       ========================================================================== */
+    .component-navbar {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      width: min(100%, 1800px);
+      margin: 0 auto;
+      padding: clamp(16px, 2.2vw, 28px) clamp(24px, 4vw, 80px) 12px;
+      position: relative;
+      z-index: 100;
+    }
+
+    .nav-group {
+      display: flex;
+      align-items: center;
+      gap: clamp(18px, 2.2vw, 32px);
+    }
+
+    .nav-right-group {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: clamp(16px, 2vw, 28px);
+    }
+
+    .nav-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      transition: color var(--transition-base);
+      white-space: nowrap;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: var(--hero-yellow);
+    }
+
+    .nav-brand {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .brand-logo-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      padding: 0 8px;
+    }
+
+    .brand-logo-svg {
+      height: clamp(48px, 4.5vw, 60px);
+      width: auto;
+      display: block;
+      transition: transform var(--transition-base);
+    }
+
+    .brand-logo-link:hover .brand-logo-svg {
+      transform: scale(1.05);
+    }
+
+    .nav-btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 22px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(255, 255, 255, 0.45);
+      color: var(--white);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      transition: all var(--transition-base);
+      white-space: nowrap;
+    }
+
+    .nav-btn-primary:hover {
+      background: rgba(255, 255, 255, 0.18);
+      border-color: var(--white);
+      transform: translateY(-1px);
+    }
+
+    /* ==========================================================================
+       3. TERMS PAGE STYLES
+       ========================================================================== */
+    .terms-hero-section {
+      padding: clamp(48px, 6vw, 80px) clamp(20px, 4vw, 80px) clamp(60px, 6vw, 90px);
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .legal-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 18px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.15);
+      color: var(--hero-yellow);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .terms-search-box {
+      max-width: 720px;
+      margin: 32px 0 20px;
+      background: #ffffff;
+      border-radius: 999px;
+      padding: 6px 8px 6px 20px;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 20px 45px rgba(0,0,0,0.3);
+    }
+
+    .terms-search-input {
+      flex: 1;
+      border: none;
+      outline: none;
+      font-size: 15px;
+      color: #0f172a;
+      font-family: inherit;
+      padding: 8px;
+    }
+
+    .terms-grid-layout {
+      max-width: 1280px;
+      margin: 0 auto 100px;
+      padding: 0 clamp(20px, 4vw, 80px);
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      align-items: start;
+    }
+
+    @media (min-width: 1024px) {
+      .terms-grid-layout {
+        grid-template-columns: 340px 1fr;
+      }
+    }
+
+    .terms-toc-sidebar {
+      background: #ffffff;
+      color: #0f172a;
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+      position: sticky;
+      top: 24px;
+    }
+
+    .toc-nav-list {
+      list-style: none;
+      padding: 0;
+      margin: 16px 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .toc-item-link {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 14px;
+      border-radius: 10px;
+      color: #475569;
+      text-decoration: none;
+      font-size: 13.5px;
+      font-weight: 600;
+      transition: all var(--transition-base);
+    }
+
+    .toc-item-link:hover, .toc-item-link.active {
+      background: #f1f5f9;
+      color: #3738e9;
+      font-weight: 700;
+    }
+
+    .terms-content-body {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .clause-card {
+      background: #ffffff;
+      color: #0f172a;
+      border-radius: 24px;
+      padding: clamp(28px, 3.5vw, 40px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      border: 1px solid #e2e8f0;
+    }
+
+    .clause-tag {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      background: #eef2ff;
+      color: #3738e9;
+      padding: 4px 12px;
+      border-radius: 999px;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+
+    .clause-heading {
+      font-size: clamp(22px, 2.2vw, 28px);
+      font-weight: 800;
+      margin-bottom: 16px;
+      color: #0f172a;
+    }
+
+    .clause-p {
+      font-size: 15px;
+      line-height: 1.65;
+      color: #475569;
+      margin-bottom: 16px;
+    }
+
+    /* ==========================================================================
+       4. COMPONENT: FOOTER
+       ========================================================================== */
+    .component-footer {
+      background: var(--navy-dark);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding: clamp(48px, 5vw, 72px) clamp(30px, 5vw, 100px) 36px;
+      width: 100%;
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .footer-watermark {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      font-size: clamp(5rem, 14.5vw, 16vw);
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      line-height: 0.85;
+      color: rgba(255, 255, 255, 0.1);
+      text-align: center;
+      text-transform: uppercase;
+      white-space: nowrap;
+      pointer-events: none;
+      user-select: none;
+      z-index: 0;
+    }
+
+    .footer-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 48px;
+      justify-content: space-between;
+      align-items: start;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .footer-links-column {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 32px;
+    }
+
+    .footer-nav-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .footer-nav-link {
+      color: #cbd5e1;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: color var(--transition-base);
+    }
+
+    .footer-nav-link:hover {
+      color: var(--hero-yellow);
+    }
+
+    .footer-newsletter-box {
+      max-width: 440px;
+      margin-left: auto;
+      width: 100%;
+    }
+
+    .newsletter-form {
+      display: flex;
+      align-items: center;
+      background: var(--navy-card);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 4px;
+      margin-bottom: 24px;
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+    }
+
+    .newsletter-input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      outline: none;
+      padding: 12px 16px;
+      font-size: 14px;
+      color: var(--white);
+      font-family: inherit;
+      min-width: 0;
+    }
+
+    .newsletter-btn {
+      background: var(--hero-yellow);
+      color: #090909;
+      border: none;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 13px;
+      padding: 10px 18px;
+      cursor: pointer;
+      transition: background var(--transition-base);
+    }
+
+    .newsletter-btn:hover {
+      background: var(--hero-yellow-hover);
+    }
+
+    .footer-social-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .social-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: var(--white);
+      color: #0f1015;
+      text-decoration: none;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      transition: transform var(--transition-base), background-color var(--transition-base);
+    }
+
+    .social-btn:hover {
+      transform: translateY(-2px);
+      background: var(--hero-yellow);
+    }
+
+    .footer-copyright {
+      padding-top: 36px;
+      text-align: center;
+      color: #6b7280;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 900px) {
+      .component-navbar {
+        display: flex;
+        justify-content: space-between;
+        padding-block: 16px;
+      }
+      .nav-group {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================================================
+       COMPONENT: HEADER NAVIGATION BAR
+       ======================================================================== -->
+  <header class="component-navbar">
+    <nav aria-label="Main Navigation" class="nav-group">
+      <a href="about.html" class="nav-link">About Us</a>
+      <a href="index.html#services" class="nav-link">Services</a>
+      <a href="index.html#products" class="nav-link">Products</a>
+    </nav>
+
+    <div class="nav-brand">
+      <a href="index.html" class="brand-logo-link" aria-label="9iceMoney Home">
+        <svg width="220" height="50" viewBox="0 0 220 50" fill="none" xmlns="http://www.w3.org/2000/svg" class="brand-logo-svg">
+          <rect x="2" y="5" width="40" height="40" rx="12" fill="#FFDC55"/>
+          <path d="M26.5 16.5C26.5 14.29 24.71 12.5 22.5 12.5C20.29 12.5 18.5 14.29 18.5 16.5C18.5 18.71 20.29 20.5 22.5 20.5C24.71 20.5 26.5 18.71 26.5 16.5ZM22.5 24.5C18.08 24.5 14.5 20.92 14.5 16.5C14.5 12.08 18.08 8.5 22.5 8.5C26.92 8.5 30.5 12.08 30.5 16.5V28.5C30.5 32.92 26.92 36.5 22.5 36.5C18.08 36.5 14.5 32.92 14.5 28.5H18.5C18.5 30.71 20.29 32.5 22.5 32.5C24.71 32.5 26.5 30.71 26.5 28.5V24.5H22.5Z" fill="#3738E9"/>
+          <text x="52" y="33" fill="#FFFFFF" font-family="'Inter', sans-serif" font-weight="900" font-size="25" letter-spacing="-0.03em">9iceMoney</text>
+        </svg>
+      </a>
+    </div>
+
+    <div class="nav-right-group">
+      <div class="nav-group">
+        <a href="support.html" class="nav-link">Support</a>
+        <a href="index.html#review" class="nav-link">Review</a>
+        <a href="earning.html" class="nav-link">Earning</a>
+      </div>
+      <a href="index.html#get-app" class="nav-btn-primary">Get app</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="terms-hero-section">
+      <div class="legal-badge">
+        <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--hero-yellow);"></span>
+        <span>LEGAL & REGULATORY AGREEMENT • LAST UPDATED: OCTOBER 2024</span>
+      </div>
+
+      <h1 style="font-size: clamp(32px, 4.2vw, 56px); font-weight: 900; line-height: 1.15; margin-bottom: 16px; letter-spacing: -0.03em;">
+        9iceMoney Terms & Conditions of Service
+      </h1>
+      <p style="font-size: 18px; color: rgba(255,255,255,0.88); max-width: 760px; line-height: 1.6;">
+        Clear, transparent rules governing your personal wallet, merchant agent POS terminal, inter-bank transfers, and utility settlements under CBN consumer protection guidelines.
+      </p>
+
+      <div class="terms-search-box">
+        <span class="material-symbols-outlined" style="color: #3738e9; font-size: 22px;">search</span>
+        <input type="text" id="termsSearchInput" placeholder="Search terms, clauses, fees, or dispute rules..." class="terms-search-input">
+      </div>
+    </section>
+
+    <!-- TWO COLUMN TERMS LAYOUT -->
+    <div class="terms-grid-layout">
+      <!-- SIDEBAR TABLE OF CONTENTS -->
+      <aside class="terms-toc-sidebar">
+        <div style="font-size: 11px; font-weight: 800; color: #64748b; letter-spacing: 0.1em; uppercase;">DOCUMENT OUTLINE</div>
+        <ul class="toc-nav-list">
+          <li><a href="#clause-1" class="toc-item-link active">1. Introduction & Acceptance</a></li>
+          <li><a href="#clause-2" class="toc-item-link">2. Account Onboarding & KYC</a></li>
+          <li><a href="#clause-3" class="toc-item-link">3. Wallet, Transfers & Cards</a></li>
+          <li><a href="#clause-4" class="toc-item-link">4. Smart POS Operations</a></li>
+          <li><a href="#clause-5" class="toc-item-link">5. Tariff Schedule & Fees</a></li>
+          <li><a href="#clause-6" class="toc-item-link">6. Prohibited Use & AML</a></li>
+          <li><a href="#clause-7" class="toc-item-link">7. Security & Safeguards</a></li>
+          <li><a href="#clause-8" class="toc-item-link">8. Disputes & Chargebacks</a></li>
+        </ul>
+      </aside>
+
+      <!-- CONTENT CLAUSES -->
+      <div class="terms-content-body">
+        <div class="clause-card" id="clause-1">
+          <span class="clause-tag">Section 01 • Acceptance</span>
+          <h2 class="clause-heading">1. Introduction & Definitions</h2>
+          <p class="clause-p">
+            Welcome to 9iceMoney, operated by 9ice Financial Technologies Limited ("9iceMoney", "we", "us", or "our"). By registering for an account, deploying a POS terminal, or completing transfers, you agree to enter into an irrevocable, legally binding contract under the laws of the Federal Republic of Nigeria.
+          </p>
+          <p class="clause-p">
+            "Wallet" refers to the digital store of monetary value held under your verified user ID. "Merchant Agent" refers to accredited businesses utilizing 9iceMoney hardware or software terminals.
+          </p>
+        </div>
+
+        <div class="clause-card" id="clause-2">
+          <span class="clause-tag">Section 02 • Identity</span>
+          <h2 class="clause-heading">2. Account Onboarding & Regulatory Verification</h2>
+          <p class="clause-p">
+            Under Central Bank of Nigeria (CBN) Anti-Money Laundering regulations, 9iceMoney is legally required to authenticate every transacting party prior to enabling transaction capabilities.
+          </p>
+          <p class="clause-p">
+            Verification includes BVN and NIN automated matching against NIBSS databases. Daily inflow and maximum balance limits apply depending on whether your account is Tier 1 (₦50k/day), Tier 2 (₦200k/day), or Tier 3 (₦5M+/day).
+          </p>
+        </div>
+
+        <div class="clause-card" id="clause-3">
+          <span class="clause-tag">Section 03 • Wallet & Cards</span>
+          <h2 class="clause-heading">3. Digital Wallet, Transfers & Virtual Cards</h2>
+          <p class="clause-p">
+            Funds inside your 9iceMoney wallet represent digital settlement claims backed 1:1 by liquid cash reserves pooled across licensed deposit-money bank partners, insured by the Nigeria Deposit Insurance Corporation (NDIC).
+          </p>
+          <p class="clause-p">
+            Inter-bank outflows utilize the NIBSS Instant Payments (NIP) switch. Completed transfers are non-recallable by the sender once a Successful Session ID is emitted.
+          </p>
+        </div>
+
+        <div class="clause-card" id="clause-4">
+          <span class="clause-tag">Section 04 • Agency Banking</span>
+          <h2 class="clause-heading">4. Smart POS Agency Banking Terms</h2>
+          <p class="clause-p">
+            Terminals remain the physical property or leased asset of 9iceMoney. Merchant Agents must maintain equipment care and prevent unauthorized physical or software alterations.
+          </p>
+          <p class="clause-p">
+            Daily commissions generated during trade operations are aggregated and swept automatically at 8:00 PM WAT daily into the merchant's primary float wallet without deductions.
+          </p>
+        </div>
+
+        <div class="clause-card" id="clause-5">
+          <span class="clause-tag">Section 05 • Tariffs</span>
+          <h2 class="clause-heading">5. Tariff Schedule & Charges</h2>
+          <p class="clause-p">
+            9iceMoney guarantees radical pricing transparency: ₦0 monthly wallet maintenance fees, ₦0 in-app transfer charges, and low statutory inter-bank transfer micro-tariffs (₦10 to ₦50 max).
+          </p>
+        </div>
+
+        <div class="clause-card" id="clause-6">
+          <span class="clause-tag">Section 06 • Prohibited Use</span>
+          <h2 class="clause-heading">6. Prohibited Use & AML Compliance</h2>
+          <p class="clause-p">
+            Wallets and terminals may not be deployed for illicit gambling, advance fee schemes, or structuring operations. Accounts triggering algorithmic risk flags will face immediate Post-No-Debit (PND) containment and report filing with the NFIU.
+          </p>
+        </div>
+
+        <div class="clause-card" id="clause-7">
+          <span class="clause-tag">Section 07 • Safeguards</span>
+          <h2 class="clause-heading">7. Security & Device Safeguards</h2>
+          <p class="clause-p">
+            Your 4-digit PIN and OTP passcodes are strictly private. 9iceMoney staff will NEVER ask for your PIN. If your device is compromised, dial *999*0# immediately to freeze all active terminals and wallets.
+          </p>
+        </div>
+
+        <div class="clause-card" id="clause-8">
+          <span class="clause-tag">Section 08 • Disputes</span>
+          <h2 class="clause-heading">8. Chargebacks & Dispute SLA</h2>
+          <p class="clause-p">
+            Failed transfers with bank debits undergo automated 24-hour reversal cycles under CBN Consumer Protection guidelines. POS chargeback claims are processed on the NIBSS dispute portal with 72-hour arbitration resolution windows.
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ========================================================================
+       COMPONENT: FOOTER
+       ======================================================================== -->
+  <footer class="component-footer">
+    <div aria-hidden="true" class="footer-watermark">9ICE MONEY</div>
+
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-links-column">
+          <ul class="footer-nav-list">
+            <li><a href="index.html" class="footer-nav-link">HOME</a></li>
+            <li><a href="index.html#products" class="footer-nav-link">OUR PRODUCT</a></li>
+            <li><a href="index.html#services" class="footer-nav-link">SERVICE</a></li>
+            <li><a href="index.html#" class="footer-nav-link">TECHNOLOGIES</a></li>
+            <li><a href="index.html#contact" class="footer-nav-link">CONTACT US</a></li>
+          </ul>
+          <ul class="footer-nav-list">
+            <li><a href="#privacy" class="footer-nav-link">PRIVACY POLICY</a></li>
+            <li><a href="terms.html" class="footer-nav-link">TERM AND CONDITION</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-newsletter-box">
+          <h4 style="margin: 0 0 8px; font-size: 20px; font-weight: 700;">Join Our Newsletter</h4>
+          <p style="margin: 0 0 20px; color: #9ca3af; font-size: 14px; font-weight: 400; line-height: 1.4;">
+            Keep up to date with everything 9iceMoney
+          </p>
+
+          <form onsubmit="event.preventDefault();" class="newsletter-form">
+            <input type="email" placeholder="Enter your email" aria-label="Email address" class="newsletter-input" required>
+            <button type="submit" aria-label="Subscribe to newsletter" class="newsletter-btn">Join</button>
+          </form>
+
+          <div class="footer-social-group">
+            <a href="#" aria-label="X (Twitter)" class="social-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="Instagram" class="social-btn">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="Facebook" class="social-btn">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="Google" class="social-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-copyright">
+        <p>9ICEMONEY, 2025 ALL RIGHTS RESERVED.</p>
+        <p style="margin-top: 4px; opacity: 0.85; font-size: 11px;">ADS DEVELOPMENT & SOFTWARE RC:3569383</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('termsSearchInput').addEventListener('input', function(e) {
+      const q = e.target.value.toLowerCase();
+      document.querySelectorAll('.clause-card').forEach(card => {
+        const text = card.innerText.toLowerCase();
+        if (text.includes(q)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
