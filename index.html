@@ -89,17 +89,13 @@
       padding: 0px 8px;
     }
     .nav-logo-img {
-      height: clamp(80px, 7vw, 115px);
+      height: clamp(48px, 4.5vw, 60px);
       width: auto;
-      max-width: 380px;
-      object-fit: contain;
       display: block;
-      filter: drop-shadow(0 2px 10px rgba(0,0,0,0.18));
       transition: transform 0.2s ease;
-      transform: scale(1.15);
     }
     .nav-logo-link:hover .nav-logo-img {
-      transform: scale(1.2);
+      transform: scale(1.05);
     }
     .nav-signin-btn {
       display: inline-flex;
@@ -254,8 +250,12 @@
     <a href="#products" class="nav-link-item">Products</a>
   </div>
   <div class="nav-logo-container">
-    <a href="#" class="nav-logo-link">
-      <img src="https://lh3.googleusercontent.com/aida/AEtjO1V1pnzcRhdvdHwHfrujjd1T2NAPeONvih25yfH2vMqsQd-Us1tC3Poxr5HcHDeAqWlNdfJQpMuai03s0AODxduqO30KRLxzAsH7Soaw1PMOqV3XUGI3dL-aS4xqhri5hP2UU35m3dAcB-owqPH5_QczoMF5qOh0pm7L99Vja417ux5KVXLQbu2PNrbt9iVH1trPpSEwKdGjkvEGNvf7r432LbsUjczLliC9Pez0XfPnDDNkQchV2k57uhVF" alt="9iceMoney" class="nav-logo-img">
+    <a href="#" class="nav-logo-link" aria-label="9iceMoney Home">
+      <svg width="220" height="50" viewBox="0 0 220 50" fill="none" xmlns="http://www.w3.org/2000/svg" class="nav-logo-img">
+        <rect x="2" y="5" width="40" height="40" rx="12" fill="#FFDC55"/>
+        <path d="M26.5 16.5C26.5 14.29 24.71 12.5 22.5 12.5C20.29 12.5 18.5 14.29 18.5 16.5C18.5 18.71 20.29 20.5 22.5 20.5C24.71 20.5 26.5 18.71 26.5 16.5ZM22.5 24.5C18.08 24.5 14.5 20.92 14.5 16.5C14.5 12.08 18.08 8.5 22.5 8.5C26.92 8.5 30.5 12.08 30.5 16.5V28.5C30.5 32.92 26.92 36.5 22.5 36.5C18.08 36.5 14.5 32.92 14.5 28.5H18.5C18.5 30.71 20.29 32.5 22.5 32.5C24.71 32.5 26.5 30.71 26.5 28.5V24.5H22.5Z" fill="#3738E9"/>
+        <text x="52" y="33" fill="#FFFFFF" font-family="'Inter', sans-serif" font-weight="900" font-size="25" letter-spacing="-0.03em">9iceMoney</text>
+      </svg>
     </a>
   </div>
   <div class="nav-right">
@@ -268,10 +268,10 @@
   </div>
 </nav>
 
-<section aria-labelledby="hero-title" class="hero" style="min-height: auto; max-height: none;">
+<section aria-labelledby="hero-title" class="hero" style="min-height: auto; max-height: none; padding-top: 48px; padding-bottom: 48px; width: 100%; max-width: none;">
 <div class="hero-copy">
-<p class="eyebrow" style="color: rgb(255, 255, 255);">Personal Banking <span aria-hidden="true">|</span> Business Banking</p>
-<h1 id="hero-title">
+<p class="eyebrow" style="color: rgb(255, 255, 255);">Personal Banking <span aria-hidden="true" class="">|</span> Business Banking</p>
+<h1 class="" id="hero-title">
           Send money, pay bills, and take control of your finances with a seamless banking experience built for everyday life
         </h1>
 <p class="hero-description">
@@ -286,17 +286,17 @@
 <span class="visually-hidden" id="get-started">Get started with 9iceMoney</span>
 
 <section aria-label="Download 9iceMoney App" style="background: linear-gradient(180deg, var(--hero-blue) 0%, #2022b8 100%); padding: clamp(32px, 5vw, 64px) clamp(20px, 4vw, 60px) clamp(48px, 6vw, 80px); display: flex; justify-content: center;">
-<div style="background: rgb(239, 239, 241); border-radius: clamp(24px, 3.5vw, 44px); width: min(100%, 1440px); overflow: visible; box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 60px; display: grid; grid-template-columns: minmax(0px, 1.15fr) minmax(0px, 0.95fr); align-items: center; position: relative; margin-top: 50px; margin-bottom: 50px;">
-<div style="padding: clamp(36px, 4vw, 56px) clamp(28px, 4.5vw, 72px); z-index: 2;">
-<h2 style="margin: 0px 0px 20px; font-size: clamp(28px, 3.4vw, 54px); font-weight: 800; color: rgb(13, 14, 21); line-height: 1.15; letter-spacing: -0.035em;">
+<div style="background: rgb(239, 239, 241); border-radius: clamp(24px, 3.5vw, 44px); width: min(100%, 1440px); overflow: visible; box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 60px; display: grid; grid-template-columns: minmax(0px, 1.15fr) minmax(0px, 0.95fr); align-items: center; position: relative; margin-top: 50px; margin-bottom: 50px;" class="">
+<div style="padding: clamp(36px, 4vw, 56px) clamp(28px, 4.5vw, 72px); z-index: 2;" class="">
+<h2 style="margin: 0px 0px 20px; font-size: clamp(28px, 3.4vw, 54px); font-weight: 800; color: rgb(13, 14, 21); line-height: 1.15; letter-spacing: -0.035em;" class="">
         Ready To Take Control Of Your Finances?
       </h2>
-<p style="margin: 0px 0px 36px; font-size: clamp(15px, 1.25vw, 18px); color: rgb(74, 77, 87); line-height: 1.6; max-width: 530px; font-weight: 500;">
+<p style="margin: 0px 0px 36px; font-size: clamp(15px, 1.25vw, 18px); color: rgb(74, 77, 87); line-height: 1.6; max-width: 530px; font-weight: 500;" class="">
         Turn routines into effortless moments. With 9iceMoney, managing your money is just a tap away — secure, smart, and made for you.
       </p>
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px;">
 <!-- Google Play Badge -->
-<a href="#" style="display: inline-flex; align-items: center; gap: 12px; background: rgb(0, 0, 0); color: rgb(255, 255, 255); padding: 10px 22px; border-radius: 12px; text-decoration: none; box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 14px; transition: transform 0.2s, box-shadow 0.2s;">
+<a href="#" style="display: inline-flex; align-items: center; gap: 12px; background: rgb(0, 0, 0); color: rgb(255, 255, 255); padding: 10px 22px; border-radius: 12px; text-decoration: none; box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 14px; transition: transform 0.2s ease 0s, box-shadow 0.2s ease 0s;" class="">
 <svg fill="none" height="26" viewBox="0 0 24 26" width="24" xmlns="http://www.w3.org/2000/svg">
 <path d="M1.08 0.63C0.84 0.9 0.69 1.3 0.69 1.83V24.17C0.69 24.7 0.84 25.1 1.08 25.37L1.17 25.46L13.73 12.9V12.72L1.17 0.17L1.08 0.63Z" fill="#2196F3"></path>
 <path d="M17.91 17.08L13.73 12.9V12.72L17.91 8.54L18.01 8.6L22.97 11.42C24.38 12.22 24.38 13.53 22.97 14.34L18.01 17.16L17.91 17.08Z" fill="#FFC107"></path>
@@ -304,188 +304,223 @@
 <path d="M18.01 8.54L3.23 0.1C2.33 -0.41 1.55 -0.34 1.08 0.16L13.73 12.81L18.01 8.54Z" fill="#4CAF50"></path>
 </svg>
 <div style="display: flex; flex-direction: column; text-align: left; line-height: 1.15;">
-<span style="font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.85;">GET IT ON</span>
-<span style="font-size: 17px; font-weight: 700; letter-spacing: -0.02em;">Google Play</span>
+<span style="font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.85;" class="">GET IT ON</span>
+<span style="font-size: 17px; font-weight: 700; letter-spacing: -0.02em;" class="">Google Play</span>
 </div>
 </a>
 <!-- App Store Badge -->
-<a href="#" style="display: inline-flex; align-items: center; gap: 12px; background: rgb(0, 0, 0); color: rgb(255, 255, 255); padding: 10px 22px; border-radius: 12px; text-decoration: none; box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 14px; transition: transform 0.2s, box-shadow 0.2s;">
+<a href="#" style="display: inline-flex; align-items: center; gap: 12px; background: rgb(0, 0, 0); color: rgb(255, 255, 255); padding: 10px 22px; border-radius: 12px; text-decoration: none; box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 14px; transition: transform 0.2s ease 0s, box-shadow 0.2s ease 0s;" class="">
 <svg fill="currentColor" height="26" viewBox="0 0 170 170" width="24">
 <path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.69-3.08-7.7-7.97-12.04-14.68-6.19-9.5-10.97-20.4-14.34-32.69-3.37-12.28-5.06-23.75-5.06-34.4 0-14.93 3.73-27.42 11.19-37.47 7.46-10.05 16.94-15.19 28.44-15.41 4.58 0 9.87 1.25 15.86 3.75 6 2.5 10.02 3.8 12.07 3.91 1.74 0 5.8-1.36 12.18-4.07 6.38-2.71 11.83-3.87 16.36-3.48 12.61.98 22.75 5.79 30.43 14.43-11.09 6.74-16.52 16.03-16.3 27.87.22 9.35 3.86 17.29 10.92 23.81 7.07 6.52 15.22 10.33 24.46 11.41-2.17 6.31-4.78 12.5-7.83 18.57zM119.22 31.84c0-7.39 2.66-14.24 7.99-20.55 5.33-6.3 11.96-10.37 19.89-12.21.65 3.8.38 7.5-.82 11.1-1.2 3.6-3.21 7.04-6.03 10.32-2.83 3.29-6.09 5.87-9.78 7.75-3.7 1.88-7.44 3.08-11.25 3.59z"></path>
 </svg>
 <div style="display: flex; flex-direction: column; text-align: left; line-height: 1.15;">
-<span style="font-size: 10px; font-weight: 500; letter-spacing: 0.02em; opacity: 0.85;">Download on the</span>
-<span style="font-size: 17px; font-weight: 700; letter-spacing: -0.02em;">App Store</span>
+<span style="font-size: 10px; font-weight: 500; letter-spacing: 0.02em; opacity: 0.85;" class="">Download on the</span>
+<span style="font-size: 17px; font-weight: 700; letter-spacing: -0.02em;" class="">App Store</span>
 </div>
 </a>
 </div>
 </div>
-
 <!-- Phone Preview / Mockup side matching reference visual -->
-<div style="position: relative; display: flex; justify-content: center; align-items: flex-end; padding-right: clamp(16px, 4vw, 48px); min-height: 420px; z-index: 3;">
-<div style="width: clamp(270px, 25vw, 325px); background: rgb(0, 0, 0); border-radius: 46px; padding: 11px; box-shadow: rgba(0, 0, 0, 0.45) 0px 35px 70px -10px, rgba(255, 255, 255, 0.25) 0px 0px 3px 2px inset; border: 4px solid rgb(31, 32, 38); margin-top: -105px; margin-bottom: 24px; position: relative; z-index: 5;">
-<div style="background: #ffffff; border-radius: 36px; overflow: hidden; display: flex; flex-direction: column;">
-<!-- Status Bar & Dynamic Island -->
-<div style="background: rgb(255, 255, 255); padding: 13px 22px 6px; display: flex; justify-content: space-between; align-items: center;">
-  <span style="font-size: 13.5px; font-weight: 800; color: rgb(10, 14, 26); letter-spacing: -0.02em;">9:41</span>
-  <div style="width: 82px; height: 21px; background: #000000; border-radius: 20px; margin: 0 auto;"></div>
-  <div style="display: flex; align-items: center; gap: 5px;">
-    <svg fill="#0a0e1a" height="11" viewBox="0 0 16 12" width="13"><path d="M1 9.5h2v2H1v-2zm4-3h2v5H5v-5zm4-3h2v8H9v-8zm4-3h2v11h-2v-11z"></path></svg>
-    <svg fill="#0a0e1a" height="11" viewBox="0 0 16 12" width="13"><path d="M8 2.5C4.8 2.5 2 4.1.5 6.5l1.6 1.6C3.4 6 5.5 4.7 8 4.7s4.6 1.3 5.9 3.4l1.6-1.6C14 4.1 11.2 2.5 8 2.5zM8 7c-1.3 0-2.5.6-3.3 1.5L8 11.7l3.3-3.2C10.5 7.6 9.3 7 8 7z"></path></svg>
-    <div style="width: 17px; height: 9.5px; border: 1.5px solid #0a0e1a; border-radius: 3px; padding: 1px; display: flex; align-items: center;"><div style="width: 75%; height: 100%; background: #0a0e1a; border-radius: 1px;"></div></div>
-  </div>
-</div>
-
-<!-- Header Greeting & Notifications -->
-<div style="padding: 10px 18px 12px; display: flex; justify-content: space-between; align-items: center; background: rgb(255, 255, 255);">
-  <div style="display: flex; align-items: center; gap: 11px;">
-    <div style="width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, rgb(55, 56, 233) 0%, rgb(32, 34, 184) 100%); display: flex; align-items: center; justify-content: center; color: rgb(255, 255, 255); font-weight: 800; font-size: 15px; box-shadow: rgba(55, 56, 233, 0.28) 0px 4px 12px;">C</div>
-    <div>
-      <div style="display: flex; align-items: center; gap: 4px;">
-        <p style="margin: 0px; font-size: 14.5px; font-weight: 800; color: rgb(11, 15, 25); letter-spacing: -0.02em;">Hello, Coper</p>
-        <span style="font-size: 13px;">👋</span>
-      </div>
-      <p style="margin: 1px 0px 0px; font-size: 11px; font-weight: 500; color: rgb(113, 125, 150);">Welcome Back</p>
-    </div>
-  </div>
-  <div style="display: flex; align-items: center; justify-content: center;">
-    <div style="width: 36px; height: 36px; border-radius: 50%; background: #f6f8fb; border: 1px solid #edf2f7; display: flex; align-items: center; justify-content: center; color: #334155; position: relative;">
-      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
-    </div>
-  </div>
-</div>
-
-<!-- 9iceMoney Primary Wallet Card -->
-<div style="margin: 4px 16px 14px; background: linear-gradient(135deg, rgb(42, 43, 226) 0%, rgb(23, 24, 141) 100%); border-radius: 22px; padding: 18px 18px 16px; color: rgb(255, 255, 255); position: relative; overflow: hidden; box-shadow: rgba(42, 43, 226, 0.45) 0px 14px 28px -6px;">
-  <div style="position: absolute; right: -20px; top: -20px; width: 100px; height: 100px; border-radius: 50%; background: radial-gradient(circle, rgba(255,255,255,0.14) 0%, rgba(255,255,255,0) 70%); pointer-events: none;"></div>
-  <div style="position: absolute; left: 30%; bottom: -30px; width: 120px; height: 70px; border-radius: 50%; background: radial-gradient(circle, rgba(255,220,85,0.08) 0%, rgba(255,220,85,0) 70%); pointer-events: none;"></div>
-  <div style="display: flex; justify-content: space-between; align-items: center;">
-    <div style="display: flex; align-items: center; gap: 6px;">
-      <span style="font-size: 10.5px; font-weight: 700; color: rgba(255, 255, 255, 0.88); text-transform: uppercase; letter-spacing: 0.05em;">Active Balance</span>
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="opacity: 0.85;"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
-    </div>
-    <span style="background: rgba(34, 197, 94, 0.22); color: rgb(134, 239, 172); border: 1px solid rgba(134, 239, 172, 0.45); font-size: 10px; font-weight: 700; padding: 2.5px 9px; border-radius: 999px;">Active</span>
-  </div>
-  <p style="margin: 10px 0px 14px; font-size: 26px; font-weight: 900; letter-spacing: -0.035em; color: rgb(255, 255, 255); line-height: 1.1;">₦ 245,320.00</p>
-  <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1px solid rgba(255,255,255,0.18); padding-top: 12px;">
-    <div style="display: flex; align-items: center; gap: 5px;">
-      <span style="font-size: 10px; font-weight: 500; color: rgba(255, 255, 255, 0.72);">Acc:</span>
-      <span style="font-size: 11px; font-weight: 700; letter-spacing: 0.06em; color: rgb(255, 220, 85);">•••• 9024</span>
-    </div>
-    <span style="font-size: 10.5px; font-weight: 800; background: rgb(255, 220, 85); color: rgb(11, 15, 25); padding: 4px 11px; border-radius: 999px; box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 6px;">+ Add Money</span>
-  </div>
-</div>
-
-<!-- Quick Actions Grid -->
-<div style="margin: 0px 16px 14px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 9px;">
-  <div style="background: #fbfcfe; border: 1px solid #eef2f6; border-radius: 16px; padding: 11px 4px 9px; display: flex; flex-direction: column; align-items: center; gap: 6px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
-    <div style="width: 36px; height: 36px; border-radius: 12px; background: #eeeffe; display: flex; align-items: center; justify-content: center; color: #3738e9;">
-      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-    </div>
-    <span style="font-size: 11px; font-weight: 700; color: rgb(30, 41, 59);">Send</span>
-  </div>
-  <div style="background: #fbfcfe; border: 1px solid #eef2f6; border-radius: 16px; padding: 11px 4px 9px; display: flex; flex-direction: column; align-items: center; gap: 6px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
-    <div style="width: 36px; height: 36px; border-radius: 12px; background: #fef7e8; display: flex; align-items: center; justify-content: center; color: #d97706;">
-      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
-    </div>
-    <span style="font-size: 11px; font-weight: 700; color: rgb(30, 41, 59);">Airtime</span>
-  </div>
-  <div style="background: #fbfcfe; border: 1px solid #eef2f6; border-radius: 16px; padding: 11px 4px 9px; display: flex; flex-direction: column; align-items: center; gap: 6px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
-    <div style="width: 36px; height: 36px; border-radius: 12px; background: #edfbf4; display: flex; align-items: center; justify-content: center; color: #059669;">
-      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"></path><path d="M1.42 9a16 16 0 0 1 21.16 0"></path><path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path><line x1="12" y1="20" x2="12.01" y2="20"></line></svg>
-    </div>
-    <span style="font-size: 11px; font-weight: 700; color: rgb(30, 41, 59);">Data</span>
-  </div>
-  <div style="background: #fbfcfe; border: 1px solid #eef2f6; border-radius: 16px; padding: 11px 4px 9px; display: flex; flex-direction: column; align-items: center; gap: 6px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
-    <div style="width: 36px; height: 36px; border-radius: 12px; background: #feecee; display: flex; align-items: center; justify-content: center; color: #dc2626;">
-      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
-    </div>
-    <span style="font-size: 11px; font-weight: 700; color: rgb(30, 41, 59);">Bills</span>
-  </div>
-</div>
-
-<!-- Banking Features / Recent Activity List -->
-<div style="margin: 0px 16px 20px;">
-  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-    <span style="font-size: 13px; font-weight: 800; color: rgb(11, 15, 25); letter-spacing: -0.01em;">Recent Activity</span>
-    <span style="font-size: 11px; font-weight: 700; color: rgb(55, 56, 233); cursor: pointer;">See all</span>
-  </div>
-  <div style="display: flex; flex-direction: column; gap: 8px;">
-    <div style="background: #ffffff; border: 1px solid #f1f5f9; border-radius: 14px; padding: 10px 12px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 1px 3px rgba(0,0,0,0.03);">
-      <div style="display: flex; align-items: center; gap: 10px;">
-        <div style="width: 32px; height: 32px; border-radius: 10px; background: #eef1fe; display: flex; align-items: center; justify-content: center; color: #3738e9;">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect></svg>
+<div style="position: relative; display: flex; justify-content: center; align-items: flex-end; padding-right: clamp(16px, 4vw, 48px); min-height: 420px; z-index: 3;" class=""><!-- Showcase Container with Smartphone & POS Terminal side by side -->
+<div style="display: flex; align-items: flex-end; justify-content: center; gap: clamp(14px, 2.2vw, 28px); margin-top: -100px; margin-bottom: 20px; position: relative; z-index: 5; flex-wrap: wrap;" class="">
+  <!-- 1. Smartphone Mockup -->
+  <div style="width: clamp(230px, 18vw, 275px); height: clamp(480px, 38vw, 575px); flex-shrink: 0; background: rgb(12, 13, 17); border-radius: 44px; padding: 8px; box-shadow: rgba(12, 16, 40, 0.4) 0px 24px 50px -10px, rgb(47, 49, 60) 0px 0px 0px 2px, rgb(26, 27, 34) 0px 0px 0px 4px; position: relative; z-index: 5; display: flex; flex-direction: column; overflow: hidden; box-sizing: border-box;">
+    <div style="background: #f4f6fa; border-radius: 36px; overflow: hidden; display: flex; flex-direction: column; width: 100%; height: 100%; position: relative; box-sizing: border-box; user-select: none;">
+      <!-- Royal Blue App Header -->
+      <div style="background: linear-gradient(180deg, #1843bf 0%, #2558e5 100%); padding: 8px 14px 14px; color: #ffffff; flex-shrink: 0;">
+        <div style="display: flex; justify-content: space-between; align-items: center; position: relative; height: 22px; margin-bottom: 4px;">
+          <span style="font-size: 11px; font-weight: 700; letter-spacing: -0.02em; padding-left: 4px; color: #ffffff;" class="">9:41</span>
+          <div style="position: absolute; left: 50%; transform: translateX(-50%); width: 70px; height: 18px; background: #000000; border-radius: 14px; display: flex; align-items: center; justify-content: flex-end; padding-right: 6px;">
+            <div style="width: 6px; height: 6px; border-radius: 50%; background: #0c142c; border: 1px solid #162444;"></div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 4px; padding-right: 3px;">
+            <svg fill="#ffffff" height="9" viewBox="0 0 16 12" width="12"><path d="M1 9.5h2v2H1v-2zm4-3h2v5H5v-5zm4-3h2v8H9v-8zm4-3h2v11h-2v-11z"></path></svg>
+            <svg fill="#ffffff" height="9" viewBox="0 0 16 12" width="12"><path d="M8 2.5C4.8 2.5 2 4.1.5 6.5l1.6 1.6C3.4 6 5.5 4.7 8 4.7s4.6 1.3 5.9 3.4l1.6-1.6C14 4.1 11.2 2.5 8 2.5zM8 7c-1.3 0-2.5.6-3.3 1.5L8 11.7l3.3-3.2C10.5 7.6 9.3 7 8 7z"></path></svg>
+            <div style="width: 16px; height: 8px; border: 1.2px solid #ffffff; border-radius: 2.5px; padding: 1px; display: flex; align-items: center;">
+              <div style="width: 10px; height: 100%; background: #ffffff; border-radius: 1px;"></div>
+            </div>
+          </div>
         </div>
-        <div>
-          <p style="margin: 0px; font-size: 12px; font-weight: 800; color: rgb(15, 23, 42);">Transfer to GTBank</p>
-          <p style="margin: 2px 0px 0px; font-size: 10px; color: rgb(148, 163, 184); font-weight: 500;">Today, 08:30 AM</p>
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 4px 2px 10px;">
+          <div style="display: flex; align-items: center; gap: 7px;">
+            <div style="width: 24px; height: 24px; border-radius: 7px; background: #ffffff; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 13px; color: #1e4bd6;" class="">9</div>
+            <div>
+              <div style="font-size: 13px; font-weight: 800; line-height: 1.1; color: #ffffff;" class="">9iceMoney</div>
+              <div style="font-size: 8px; opacity: 0.9; color: #d6e2ff;" class="">Banking Made Simple</div>
+            </div>
+          </div>
+          <div style="position: relative; width: 26px; height: 26px; border-radius: 50%; background: rgba(255, 255, 255, 0.16); display: flex; align-items: center; justify-content: center;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+          </div>
+        </div>
+        <div style="padding: 1px 2px;">
+          <div style="display: flex; align-items: center; gap: 5px; opacity: 0.9;">
+            <span style="font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: #d6e2ff;" class="">TOTAL BALANCE</span>
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#d6e2ff" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+          </div>
+          <div style="margin-top: 4px; font-size: 21px; font-weight: 900; letter-spacing: -0.03em; color: #ffffff;" class="">₦245,320.00</div>
         </div>
       </div>
-      <span style="font-size: 12px; font-weight: 800; color: rgb(220, 38, 38);">-₦ 15,000</span>
-    </div>
-    <div style="background: #ffffff; border: 1px solid #f1f5f9; border-radius: 14px; padding: 10px 12px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 1px 3px rgba(0,0,0,0.03);">
-      <div style="display: flex; align-items: center; gap: 10px;">
-        <div style="width: 32px; height: 32px; border-radius: 10px; background: #e9fbf2; display: flex; align-items: center; justify-content: center; color: #16a34a;">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="7" x2="17" y2="17"></line><polyline points="17 7 17 17 7 17"></polyline></svg>
+      <!-- Main App Content -->
+      <div style="flex: 1; padding: 8px 10px; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden;">
+        <div style="background: #ffffff; border-radius: 12px; padding: 7px 5px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 3px; box-shadow: 0 1px 6px rgba(27,69,194,0.04);">
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 3px;">
+            <div style="width: 28px; height: 28px; border-radius: 50%; background: #eaf0ff; display: flex; align-items: center; justify-content: center; color: #2050dd;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></div>
+            <span style="font-size: 8.5px; font-weight: 700; color: #1e293b;" class="">Send</span>
+          </div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 3px;">
+            <div style="width: 28px; height: 28px; border-radius: 50%; background: #eaf0ff; display: flex; align-items: center; justify-content: center; color: #2050dd;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><rect x="5" y="2" width="14" height="20" rx="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg></div>
+            <span style="font-size: 8.5px; font-weight: 700; color: #1e293b;" class="">Airtime</span>
+          </div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 3px;">
+            <div style="width: 28px; height: 28px; border-radius: 50%; background: #eaf0ff; display: flex; align-items: center; justify-content: center; color: #2050dd;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M5 12.55a11 11 0 0 1 14.08 0"></path><path d="M1.42 9a16 16 0 0 1 21.16 0"></path><path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path><line x1="12" y1="20" x2="12.01" y2="20"></line></svg></div>
+            <span style="font-size: 8.5px; font-weight: 700; color: #1e293b;" class="">Data</span>
+          </div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 3px;">
+            <div style="width: 28px; height: 28px; border-radius: 50%; background: #eaf0ff; display: flex; align-items: center; justify-content: center; color: #2050dd;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg></div>
+            <span style="font-size: 8.5px; font-weight: 700; color: #1e293b;" class="">Bills</span>
+          </div>
         </div>
-        <div>
-          <p style="margin: 0px; font-size: 12px; font-weight: 800; color: rgb(15, 23, 42);">Wallet Deposit</p>
-          <p style="margin: 2px 0px 0px; font-size: 10px; color: rgb(148, 163, 184); font-weight: 500;">Yesterday</p>
+        <!-- Mini Feature Cards -->
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <div style="background: #ffffff; border-radius: 11px; padding: 7px 10px; display: flex; align-items: center; justify-content: space-between; border: 1px solid rgba(226,232,240,0.8);">
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <div style="width: 24px; height: 24px; border-radius: 7px; background: #eef2ff; display: flex; align-items: center; justify-content: center; color: #2558e5;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M17 1l4 4-4 4"></path><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><path d="M7 23l-4-4 4-4"></path><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg></div>
+              <div><div style="font-size: 10.5px; font-weight: 800; color: #0f172a;" class="">Transfer</div><div style="font-size: 8px; color: #94a3b8;" class="">Send to other banks</div></div>
+            </div>
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#cbd5e1" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </div>
+          <div style="background: #ffffff; border-radius: 11px; padding: 7px 10px; display: flex; align-items: center; justify-content: space-between; border: 1px solid rgba(226,232,240,0.8);">
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <div style="width: 24px; height: 24px; border-radius: 7px; background: #e8faf7; display: flex; align-items: center; justify-content: center; color: #0d9488;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><rect x="2" y="5" width="20" height="14" rx="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg></div>
+              <div><div style="font-size: 10.5px; font-weight: 800; color: #0f172a;" class="">Wallet</div><div style="font-size: 8px; color: #94a3b8;" class="">Fund &amp; manage</div></div>
+            </div>
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#cbd5e1" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </div>
+          <div style="background: #ffffff; border-radius: 11px; padding: 7px 10px; display: flex; align-items: center; justify-content: space-between; border: 1px solid rgba(226,232,240,0.8);">
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <div style="width: 24px; height: 24px; border-radius: 7px; background: #fef3c7; display: flex; align-items: center; justify-content: center; color: #d97706;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 16 14"></polyline></svg></div>
+              <div><div style="font-size: 10.5px; font-weight: 800; color: #0f172a;" class="">History</div><div style="font-size: 8px; color: #94a3b8;" class="">View all transactions</div></div>
+            </div>
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#cbd5e1" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </div>
         </div>
       </div>
-      <span style="font-size: 12px; font-weight: 800; color: rgb(22, 163, 74);">+₦ 85,000</span>
+      <!-- iOS Tab Bar -->
+      <div style="background: #ffffff; border-top: 1px solid #edf1f7; padding: 6px 10px 4px; display: grid; grid-template-columns: repeat(4, 1fr); align-items: center; flex-shrink: 0;">
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 2px; color: #2050dd;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path></svg>
+          <span style="font-size: 8px; font-weight: 800;" class="">Home</span>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 2px; color: #94a3b8;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="5" width="20" height="14" rx="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg>
+          <span style="font-size: 8px; font-weight: 600;" class="">Cards</span>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 2px; color: #94a3b8;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 16 14"></polyline></svg>
+          <span style="font-size: 8px; font-weight: 600;" class="">History</span>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 2px; color: #94a3b8;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span style="font-size: 8px; font-weight: 600;" class="">Profile</span>
+        </div>
+      </div>
+      <div style="background: #ffffff; padding: 2px 0 5px; display: flex; justify-content: center; flex-shrink: 0;">
+        <div style="width: 90px; height: 3.5px; background: #0f172a; border-radius: 999px; opacity: 0.8;"></div>
+      </div>
     </div>
   </div>
-</div>
 
-<!-- Authentic iOS Home Indicator -->
-<div style="background: rgb(255, 255, 255); padding: 6px 0px 14px; display: flex; justify-content: center; align-items: center;">
-  <div style="width: 134px; height: 4.5px; background: #0b0f19; border-radius: 999px; opacity: 0.85;"></div>
-</div>
-</div>
-</div>
-</div>
+  <!-- 2. Smart POS Terminal (Matching POS Device in Woman's Left Hand) -->
+  <div style="width: clamp(210px, 16vw, 250px); height: clamp(430px, 34vw, 510px); flex-shrink: 0; background: linear-gradient(145deg, #4ea3ff 0%, #2578f5 60%, #175ecf 100%); border-radius: 28px 28px 24px 24px; padding: 8px 8px 12px; box-shadow: rgba(12, 35, 110, 0.45) 0px 22px 50px -10px, rgba(255, 255, 255, 0.25) 0px 1px 2px inset, rgba(0, 0, 0, 0.2) 0px 4px 12px; position: relative; z-index: 6; display: flex; flex-direction: column; box-sizing: border-box;">
+    <!-- Top Printer / Receipt Roll Head Compartment -->
+    <div style="background: linear-gradient(180deg, #62b1ff 0%, #3083f7 100%); border-radius: 20px 20px 12px 12px; padding: 10px 14px 10px; margin-bottom: 7px; display: flex; flex-direction: column; align-items: center; position: relative; box-shadow: inset 0 2px 3px rgba(255,255,255,0.4), 0 3px 6px rgba(10,38,100,0.18); border: 1.5px solid rgba(255,255,255,0.25);">
+      <!-- Contactless NFC Wave Symbol -->
+      <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 6px; color: #ffffff;">
+        <svg width="28" height="20" viewBox="0 0 32 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+          <path d="M11 19c2.8-2.6 4.5-6.3 4.5-10.4S13.8 1 11 0"></path>
+          <path d="M16 21.5c4-3.5 6.5-8.8 6.5-14.5S20 0 16 0"></path>
+          <path d="M21 24c5.2-4.5 8.5-11.2 8.5-18.7S26.2 0 21 0"></path>
+        </svg>
+      </div>
+      <!-- Dark Receipt Paper Dispenser Slot -->
+      <div style="width: 100%; height: 6px; background: #0e172e; border-radius: 3px; box-shadow: inset 0 1px 3px rgba(0,0,0,0.8); position: relative; display: flex; justify-content: center;">
+        <div style="width: 32px; height: 1.5px; background: rgba(255,255,255,0.3); border-radius: 1px; margin-top: 2px;"></div>
+      </div>
+    </div>
+
+    <!-- POS Touchscreen Display -->
+    <div style="background: #ffffff; border-radius: 18px; flex: 1; display: flex; flex-direction: column; overflow: hidden; box-shadow: inset 0 0 0 1px rgba(0,0,0,0.06), 0 2px 6px rgba(0,0,0,0.08); padding: 8px 10px 10px; justify-content: space-between; box-sizing: border-box; user-select: none;">
+      <!-- Display Top: Status Bar + App Logo -->
+      <div>
+        <div style="display: flex; justify-content: space-between; align-items: center; font-size: 9.5px; font-weight: 700; color: #1e293b; padding: 2px 2px 4px;">
+          <span class="">9:41</span>
+          <div style="display: flex; align-items: center; gap: 3.5px;">
+            <svg fill="#1e293b" height="8" viewBox="0 0 16 12" width="10"><path d="M1 9.5h2v2H1v-2zm4-3h2v5H5v-5zm4-3h2v8H9v-8zm4-3h2v11h-2v-11z"></path></svg>
+            <svg fill="#1e293b" height="8" viewBox="0 0 16 12" width="10"><path d="M8 2.5C4.8 2.5 2 4.1.5 6.5l1.6 1.6C3.4 6 5.5 4.7 8 4.7s4.6 1.3 5.9 3.4l1.6-1.6C14 4.1 11.2 2.5 8 2.5zM8 7c-1.3 0-2.5.6-3.3 1.5L8 11.7l3.3-3.2C10.5 7.6 9.3 7 8 7z"></path></svg>
+            <div style="width: 14px; height: 7px; border: 1px solid #1e293b; border-radius: 2px; padding: 0.8px; display: flex; align-items: center;">
+              <div style="width: 8px; height: 100%; background: #1e293b; border-radius: 0.8px;"></div>
+            </div>
+          </div>
+        </div>
+        <!-- 9iceMoney POS Branding -->
+        <div style="display: flex; align-items: center; justify-content: center; gap: 5px; margin-top: 4px;">
+          <div style="width: 18px; height: 18px; border-radius: 5px; background: #2256e6; display: flex; align-items: center; justify-content: center; color: #ffffff; font-weight: 900; font-size: 11px;" class="">9</div>
+          <span style="font-size: 12px; font-weight: 800; color: #2256e6; letter-spacing: -0.01em;" class="">9iceMoney</span>
+        </div>
+      </div>
+
+      <!-- Payment Successful & Large Amount Badge -->
+      <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 6px 0;">
+        <div style="font-size: clamp(20px, 2.3vw, 25px); font-weight: 900; color: #0a0e1a; letter-spacing: -0.03em; line-height: 1.1;" class="">
+          ₦ 24,500
+        </div>
+        <div style="display: inline-flex; align-items: center; gap: 4px; margin-top: 5px; background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 999px; padding: 2px 8px;">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <span style="font-size: 9px; font-weight: 700; color: #059669;" class="">Payment Successful</span>
+        </div>
+      </div>
+
+      <!-- 4 POS Service Options (Airtime, Data, Bills, Transfer) -->
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; padding: 4px 2px;">
+        <!-- Airtime -->
+        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 9px; padding: 5px 6px; display: flex; flex-direction: column; align-items: center; gap: 3px;">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#1e293b" stroke-width="2.2"><rect x="5" y="2" width="14" height="20" rx="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+          <span style="font-size: 8px; font-weight: 700; color: #334155;" class="">Airtime</span>
+        </div>
+        <!-- Data -->
+        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 9px; padding: 5px 6px; display: flex; flex-direction: column; align-items: center; gap: 3px;">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#1e293b" stroke-width="2.2"><path d="M5 12.55a11 11 0 0 1 14.08 0"></path><path d="M1.42 9a16 16 0 0 1 21.16 0"></path><path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path></svg>
+          <span style="font-size: 8px; font-weight: 700; color: #334155;" class="">Data</span>
+        </div>
+        <!-- Bills -->
+        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 9px; padding: 5px 6px; display: flex; flex-direction: column; align-items: center; gap: 3px;">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#1e293b" stroke-width="2.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+          <span style="font-size: 8px; font-weight: 700; color: #334155;" class="">Bills</span>
+        </div>
+        <!-- Transfer -->
+        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 9px; padding: 5px 6px; display: flex; flex-direction: column; align-items: center; gap: 3px;">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#1e293b" stroke-width="2.2"><path d="M17 1l4 4-4 4"></path><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><path d="M7 23l-4-4 4-4"></path><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg>
+          <span style="font-size: 8px; font-weight: 700; color: #334155;" class="">Transfer</span>
+        </div>
+      </div>
+
+      <!-- Royal Blue Done Pill Action Button -->
+      <div style="padding-top: 4px;">
+        <div style="background: #2050dd; color: #ffffff; text-align: center; padding: 7px 12px; border-radius: 8px; font-size: 11px; font-weight: 800; letter-spacing: 0.02em; box-shadow: 0 3px 8px rgba(32,80,221,0.35); cursor: pointer;" class="">
+          Done
+        </div>
+      </div>
+    </div>
+
+    <!-- POS Bottom Card Slot Accent Line -->
+    <div style="height: 5px; width: 44px; background: rgba(0,0,0,0.35); border-radius: 3px; margin: 6px auto 0; box-shadow: inset 0 1px 2px rgba(0,0,0,0.6);"></div>
+  </div>
+</div></div>
 </div>
 </section>
 
-<footer style="background: rgb(15, 16, 21); border-top: 1px solid rgba(255, 255, 255, 0.08); padding: clamp(48px, 5vw, 72px) clamp(30px, 5vw, 100px) 36px; width: 100%; box-sizing: border-box; color: rgb(255, 255, 255); position: relative; overflow: hidden;">
-<div aria-hidden="true" style="position: absolute; bottom: 0px; left: 0px; right: 0px; width: 100%; font-size: clamp(5rem, 14.5vw, 16vw); font-weight: 900; letter-spacing: 0.04em; line-height: 0.85; color: rgba(255, 255, 255, 0.04); text-align: center; text-transform: uppercase; white-space: nowrap; pointer-events: none; user-select: none; z-index: 0;">9ICE MONEY</div>
-<div style="max-width: 1400px; margin: 0px auto; position: relative; z-index: 1;">
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 48px; justify-content: space-between; align-items: start; padding-bottom: 48px; border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 32px;">
-<ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 18px;">
-<li><a href="#" style="color: rgb(203, 213, 225); text-decoration: none; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s;">HOME</a></li>
-<li><a href="#services" style="color: rgb(203, 213, 225); text-decoration: none; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s;">OUR PRODUCT</a></li>
-<li><a href="#services" style="color: rgb(203, 213, 225); text-decoration: none; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s;">SERVICE</a></li>
-<li><a href="#" style="color: rgb(203, 213, 225); text-decoration: none; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s;">TECHNOLOGIES</a></li>
-<li><a href="#contact" style="color: rgb(203, 213, 225); text-decoration: none; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s;">CONTACT US</a></li>
-</ul>
-<ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 18px;">
-<li><a href="#privacy" style="color: rgb(203, 213, 225); text-decoration: none; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s;">PRIVACY POLICY</a></li>
-<li><a href="#terms" style="color: rgb(203, 213, 225); text-decoration: none; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s;">TERM AND CONDITION</a></li>
-</ul>
-</div>
-<div style="max-width: 440px; margin-left: auto; width: 100%;">
-<h4 style="margin: 0px 0px 8px; font-size: 20px; font-weight: 700; color: rgb(255, 255, 255); letter-spacing: -0.01em;">Join Our Newsletter</h4>
-<p style="margin: 0px 0px 20px; color: rgb(156, 163, 175); font-size: 14px; font-weight: 400; line-height: 1.4;">Keep up to date with everything 9iceMoney</p>
-<form onsubmit="event.preventDefault();" style="display: flex; align-items: center; background: #1c1e24; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 10px; padding: 4px; margin-bottom: 24px; box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);">
-<input aria-label="Email address" placeholder="Enter your email" style="flex: 1; background: transparent; border: none; outline: none; padding: 12px 16px; font-size: 14px; color: #ffffff; font-family: inherit; min-width: 0;" type="email">
-<button aria-label="Subscribe" style="background: var(--hero-yellow, #ffdc55); color: rgb(9, 9, 9); border: none; outline: none; border-radius: 8px; font-weight: 700; font-size: 13px; padding: 10px 18px; cursor: pointer; transition: background 0.2s;" type="submit">Join</button>
-</form>
-<div style="display: flex; align-items: center; gap: 12px;">
-<a aria-label="LinkedIn" href="#" style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 8px; background: rgb(255, 255, 255); color: rgb(15, 16, 21); text-decoration: none; font-weight: 700; font-size: 14px; transition: transform 0.2s;">in</a>
-<a aria-label="Instagram" href="#" style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 8px; background: rgb(255, 255, 255); color: rgb(15, 16, 21); text-decoration: none; transition: transform 0.2s;">
-<svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="18"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
-</a>
-<a aria-label="Facebook" href="#" style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 8px; background: rgb(255, 255, 255); color: rgb(15, 16, 21); text-decoration: none; font-weight: 800; font-size: 16px; transition: transform 0.2s;">f</a>
-</div>
-</div>
-</div>
-<div style="padding-top: 36px; text-align: center;">
-<p style="margin: 0px; color: rgb(107, 114, 128); font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;">9ICEMONEY, 2025 ALL RIGHTS RESERVED.</p>
-</div>
-</div>
-</footer>
+<footer style="background: rgb(15, 16, 21); border-top: 1px solid rgba(255, 255, 255, 0.08); padding: clamp(48px, 5vw, 72px) clamp(30px, 5vw, 100px) 36px; width: 100%; box-sizing: border-box; color: rgb(255, 255, 255); position: relative; overflow: hidden;" class=""><div aria-hidden="true" style="position: absolute; bottom: 0px; left: 0px; right: 0px; width: 100%; font-size: clamp(5rem, 14.5vw, 16vw); font-weight: 900; letter-spacing: 0.04em; line-height: 0.85; color: rgba(255, 255, 255, 0.04); text-align: center; text-transform: uppercase; white-space: nowrap; pointer-events: none; user-select: none; z-index: 0;" class="">9ICE MONEY</div><div style="max-width: 1400px; margin: 0px auto; position: relative; z-index: 1;" class=""><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 48px; justify-content: space-between; align-items: start; padding-bottom: 48px; border-bottom: 1px solid rgba(255, 255, 255, 0.08);"><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 32px;"><ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 18px;"><li class=""><a href="#" style="color: rgb(203, 213, 225); text-decoration: none; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s ease 0s;" class="">HOME</a></li><li class=""><a href="#services" style="color: rgb(203, 213, 225); text-decoration: none; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s ease 0s;" class="">OUR PRODUCT</a></li><li class=""><a href="#services" style="color: rgb(203, 213, 225); text-decoration: none; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s ease 0s;" class="">SERVICE</a></li><li class=""><a href="#" style="color: rgb(203, 213, 225); text-decoration: none; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s ease 0s;" class="">TECHNOLOGIES</a></li><li class=""><a href="#contact" style="color: rgb(203, 213, 225); text-decoration: none; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s ease 0s;" class="">CONTACT US</a></li></ul><ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 18px;"><li class=""><a href="#privacy" style="color: rgb(203, 213, 225); text-decoration: none; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s ease 0s;" class="">PRIVACY POLICY</a></li><li class=""><a href="#terms" style="color: rgb(203, 213, 225); text-decoration: none; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s ease 0s;" class="">TERM AND CONDITION</a></li></ul></div><div style="max-width: 440px; margin-left: auto; width: 100%;"><h4 style="margin: 0px 0px 8px; font-size: 20px; font-weight: 700; color: rgb(255, 255, 255); letter-spacing: -0.01em;" class="">Join Our Newsletter</h4><p style="margin: 0px 0px 20px; color: rgb(156, 163, 175); font-size: 14px; font-weight: 400; line-height: 1.4;" class="">Keep up to date with everything 9iceMoney</p><form onsubmit="event.preventDefault();" style="display: flex; align-items: center; background: #1c1e24; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 10px; padding: 4px; margin-bottom: 24px; box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);"><input aria-label="Email address" placeholder="Enter your email" style="flex: 1; background: transparent; border: none; outline: none; padding: 12px 16px; font-size: 14px; color: #ffffff; font-family: inherit; min-width: 0;" type="email"><button aria-label="Subscribe" style="background: var(--hero-yellow, #ffdc55); color: rgb(9, 9, 9); border: medium none currentcolor; outline: none; border-radius: 8px; font-weight: 700; font-size: 13px; padding: 10px 18px; cursor: pointer; transition: background 0.2s ease 0s;" type="submit" class="">Join</button></form><div style="display: flex; align-items: center; gap: 12px;"><a aria-label="X" href="#" style="display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 10px; background: rgb(255, 255, 255); color: rgb(15, 16, 21); text-decoration: none; transition: transform 0.2s ease 0s, background-color 0.2s ease 0s, box-shadow 0.2s ease 0s; box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 6px;" onmouseover="this.style.transform='translateY(-2px)';this.style.background='#ffdc55';" onmouseout="this.style.transform='none';this.style.background='#ffffff';"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg></a><a aria-label="Instagram" href="#" style="display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 10px; background: rgb(255, 255, 255); color: rgb(15, 16, 21); text-decoration: none; transition: transform 0.2s ease 0s, background-color 0.2s ease 0s, box-shadow 0.2s ease 0s; box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 6px;" onmouseover="this.style.transform='translateY(-2px)';this.style.background='#ffdc55';" onmouseout="this.style.transform='none';this.style.background='#ffffff';"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg></a><a aria-label="Facebook" href="#" style="display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 10px; background: rgb(255, 255, 255); color: rgb(15, 16, 21); text-decoration: none; transition: transform 0.2s ease 0s, background-color 0.2s ease 0s, box-shadow 0.2s ease 0s; box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 6px;" onmouseover="this.style.transform='translateY(-2px)';this.style.background='#ffdc55';" onmouseout="this.style.transform='none';this.style.background='#ffffff';"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg></a><a aria-label="Google" href="#" style="display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 10px; background: rgb(255, 255, 255); color: rgb(15, 16, 21); text-decoration: none; transition: transform 0.2s ease 0s, background-color 0.2s ease 0s, box-shadow 0.2s ease 0s; box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 6px;" onmouseover="this.style.transform='translateY(-2px)';this.style.background='#ffdc55';" onmouseout="this.style.transform='none';this.style.background='#ffffff';"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"></path></svg></a></div></div></div><div style="padding-top: 36px; text-align: center;"><p style="margin: 0px; color: rgb(107, 114, 128); font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;" class="">9ICEMONEY, 2025 ALL RIGHTS RESERVED.</p></div></div></footer>
 </main>
 </body>
 </html>
