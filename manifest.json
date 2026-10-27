@@ -1,0 +1,16 @@
+{
+  "name": "9iceMoney Banking",
+  "short_name": "9iceMoney",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#3738e9",
+  "theme_color": "#3738e9",
+  "description": "9iceMoney Personal & Business Mobile Banking - CBN Licensed & NDIC Insured",
+  "icons": [
+    {
+      "src": "images/logo.png",
+      "sizes": "100x40",
+      "type": "image/png"
+    }
+  ]
+}
